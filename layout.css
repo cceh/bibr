@@ -1,0 +1,41 @@
+TEI {
+	
+	background-color: black;
+	
+}
+
+
+teiHeader {
+	
+	display: none;
+	
+}
+
+
+front {
+	
+	margin-bottom: 20px;
+	padding: 20px;
+	border: 2px solid blue;
+	font-size: larger;
+	display: block;
+	
+}
+
+
+listBibl{
+	
+	display: block;
+	margin: 20px;
+	background-color: #1F1F2F;
+	border: 1px solid grey;
+	
+}
+
+head {
+	display: block;
+	font-style: italic;
+}
+
+
+
