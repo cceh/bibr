@@ -41,9 +41,30 @@ listBibl{
 	
 }
 
+bibl{
+	
+	display: block;
+	margin: 10px;
+	background-color: #2F2F3F;
+	border: 1px solid grey;
+	
+}
+
 head {
 	display: block;
 	font-style: italic;
+}
+
+
+idno {
+	display: block;
+	font-weight: bold;
+	
+}
+
+
+idno:before{
+    content: "IDNO: ";
 }
 
 

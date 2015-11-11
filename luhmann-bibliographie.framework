@@ -56,10 +56,10 @@
 											<String>Zeichnet Seitenzahlen aus</String>
 										</field>
 										<field name="largeIconPath">
-											<String>${framework}/icons/format-list-numbers.png</String>
+											<String>${framework}/icons/numeric.png</String>
 										</field>
 										<field name="smallIconPath">
-											<String>${framework}/icons/format-list-numbers.png</String>
+											<String>${framework}/icons/numeric.png</String>
 										</field>
 										<field name="accessKey">
 											<String></String>
@@ -156,6 +156,56 @@
 											<Boolean>false</Boolean>
 										</field>
 									</action>
+									<action>
+										<field name="id">
+											<String>tag_author</String>
+										</field>
+										<field name="name">
+											<String>Autor auszeichnen</String>
+										</field>
+										<field name="description">
+											<String>Zeichnet den Autor aus.</String>
+										</field>
+										<field name="largeIconPath">
+											<String>${framework}/icons/account.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>${framework}/icons/account.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>element</String>
+																<String>&lt;author>&lt;name key="">&lt;/name>&lt;/author></String>
+															</entry>
+															<entry>
+																<String>schemaAware</String>
+																<String>false</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ToggleSurroundWithElementOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
 								</action-array>
 							</field>
 							<field name="menubarDescriptor">
@@ -209,6 +259,11 @@
 											<toolbarItem>
 												<field name="actionID">
 													<String>add_item</String>
+												</field>
+											</toolbarItem>
+											<toolbarItem>
+												<field name="actionID">
+													<String>tag_author</String>
 												</field>
 											</toolbarItem>
 											<toolbarItem>
