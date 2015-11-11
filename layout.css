@@ -2,8 +2,17 @@ TEI {
 	
 	background-color: black;
 	
+	-oxy-display-tags: none;
+	
+	
 }
 
+
+idno, bibl{
+
+	-oxy-display-tags: none;
+
+}
 
 teiHeader {
 	
@@ -35,6 +44,11 @@ listBibl{
 head {
 	display: block;
 	font-style: italic;
+}
+
+
+series{
+	font-weight: bold;
 }
 
 
