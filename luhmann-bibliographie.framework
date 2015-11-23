@@ -466,7 +466,7 @@
 																<String>fragment</String>
 																<String>&lt;listBibl>
 &lt;head>YYYY&lt;/head>
-&lt;bibl type="journalArticle" status="published" xml:id="nl_bibl_dammann_1958_A1">&lt;/bibl>
+&lt;bibl type="journalArticle" status="published" xml:id="">&lt;/bibl>
 &lt;/listBibl></String>
 															</entry>
 															<entry>
@@ -524,7 +524,7 @@
 													<field name="argValues">
 														<serializableOrderedMap>
 															<entry>
-																<String>element</String>
+																<String>fragment</String>
 																<String>&lt;author>&lt;name key="">&lt;/name>&lt;/author></String>
 															</entry>
 															<entry>
@@ -534,7 +534,7 @@
 														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
-														<String>ro.sync.ecss.extensions.commons.operations.ToggleSurroundWithElementOperation</String>
+														<String>ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
