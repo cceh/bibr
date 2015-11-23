@@ -1,11 +1,21 @@
+@namespace oxy url('http://www.oxygenxml.com/extensions/author');
+
+/* Main */
+
 TEI {
 	
-	background-color: black;
+	background-color: white;
 	
-	-oxy-display-tags: none;
+	-oxy-display-tags: none !important;
 	
-	color: white;
+	color: black;
 	
+}
+
+
+oxy|comment{
+
+	display: none !important;
 	
 }
 
@@ -15,6 +25,18 @@ idno, bibl{
 	-oxy-display-tags: none;
 
 }
+
+
+lb {
+
+	visibility:-oxy-collapse-text;
+	content: "\A";
+	
+}
+
+
+/* Header */
+	
 
 teiHeader {
 	
@@ -31,26 +53,10 @@ front {
 	font-size: larger;
 	display: block;
 	
-}
-
-
-listBibl{
-	
-	display: block;
-	margin: 20px;
-	background-color: #1F1F2F;
-	border: 1px solid grey;
+	-oxy-display-tags: none !important;
 	
 }
 
-bibl{
-	
-	display: block;
-	margin: 10px;
-	background-color: #2F2F3F;
-	border: 1px solid grey;
-	
-}
 
 head {
 	display: block;
@@ -58,20 +64,339 @@ head {
 }
 
 
-idno {
+/* Content */
+
+listBibl{
+	
 	display: block;
-	font-weight: bold;
 	
 }
 
 
-idno:before{
-    content: "IDNO: ";
-}
+
 
 
 series{
 	font-weight: bold;
+}
+
+
+
+/* Main entries in a list bibl */
+listBibl > biblStruct, listBibl > bibl{
+
+	margin-bottom: 10px;
+	border: 10px solid #000000;
+
+}
+
+
+listBibl > biblStruct:before{
+
+	
+	content: "Bibliographischer Eintrag";
+	font-size: 15pt;
+	font-weight: bold;
+
+
+}
+
+
+listBibl > bibl:before{
+
+	
+	content: "Bibliographischer Eintrag (unstrukturiert)";
+	font-size: 15pt;
+	font-weight: bold;
+
+
+}
+
+
+author name {
+
+	display: block;
+    -oxy-display-tags: none;
+	
+    content: oxy_label(text, "Autor: ", width, 10em, text-align, right)
+             oxy_editor(type, text, edit, "#text", columns, 30)
+			 oxy_editor(type, button, actionID, insert_author, transparent, true, color, #FFFFFF);
+			 
+	visibility:-oxy-collapse-text;
+
+}
+
+
+title[type="main"] {
+
+	display: block;
+    -oxy-display-tags: none;
+	
+    content: oxy_label(text, "Title: ", width, 10em, text-align, right)
+             oxy_editor(type, text, edit, "#text", columns, 30);
+			 
+	visibility:-oxy-collapse-text;			 
+
+}
+
+
+
+title[type="sub"] {
+
+	display: block;
+    -oxy-display-tags: none;
+	
+    content: oxy_label(text, "Subtitle: ", width, 10em, text-align, right)
+             oxy_editor(type, text, edit, "#text", columns, 30);
+			 
+	visibility:-oxy-collapse-text;			 
+
+
+}
+
+
+editor name{
+
+	display: block;
+    -oxy-display-tags: none;
+	
+    content: oxy_label(text, "Editor: ", width, 10em, text-align, right)
+             oxy_editor(type, text, edit, "#text", columns, 30);
+			 
+	visibility:-oxy-collapse-text;			 
+
+
+}
+
+
+/* Editor */
+editor > note[type="role"]{
+
+	display: block;
+    -oxy-display-tags: none;
+	
+    content: oxy_label(text, "Editor Role: ", width, 10em, text-align, right)
+             oxy_editor(type, text, edit, "#text", columns, 30);
+			 
+	visibility:-oxy-collapse-text;			 
+
+
+}
+
+
+imprint {
+
+	display: block;
+	margin: 1px solid white;
+
+
+}
+
+
+imprint:before{
+
+	content: "Imprint";
+	font-size: 14pt;
+
+
+}
+
+
+date{
+
+	display: block;
+    -oxy-display-tags: none;
+	
+    content: oxy_label(text, "Datum: ", width, 10em, text-align, right)
+             oxy_editor(type, text, edit, "#text", columns, 30);
+			 
+	visibility:-oxy-collapse-text;			 
+
+
+}
+
+
+pubPlace{
+
+	display: block;
+    -oxy-display-tags: none;
+	
+    content: oxy_label(text, "Publikationsort: ", width, 10em, text-align, right)
+             oxy_editor(type, text, edit, "#text", columns, 30);
+			 
+	visibility:-oxy-collapse-text;			 
+
+
+}
+
+
+publisher{
+
+	display: block;
+    -oxy-display-tags: none;
+	
+    content: oxy_label(text, "Verlag: ", width, 10em, text-align, right)
+             oxy_editor(type, text, edit, "#text", columns, 30);
+			 
+	visibility:-oxy-collapse-text;			 
+
+
+}
+
+
+idno{
+
+	display: block;
+    -oxy-display-tags: none;
+	
+    content: oxy_label(text, "IDNO: ", width, 10em, text-align, right)
+             oxy_editor(type, text, edit, "#text", columns, 30);
+			 
+	visibility:-oxy-collapse-text;			 
+
+
+}
+
+
+
+/* Related Items */
+
+relatedItem{
+
+	display: block;
+	
+	margin: 5px;
+	border: 2px solid grey;
+	
+	visibility:-oxy-collapse-text;	
+	
+
+
+}
+
+relatedItem[type="articleIncluded"]:before{
+
+	content: "Zugehöriges Element (Enthaltener Artikel)";
+	visibility:-oxy-collapse-text;		
+	
+}
+
+
+relatedItem[type="firstPrint"]:before{
+
+	content: "Zugehöriges Element (Erstausgabe)";
+	visibility:-oxy-collapse-text;		
+	
+}
+
+
+relatedItem[type="reprint"]:before{
+
+	content: "Zugehöriges Element (Reprint)";
+	visibility:-oxy-collapse-text;		
+	
+}
+
+
+
+relatedItem[type="translation"]:before{
+
+	content: "Zugehöriges Element (Übersetzung)";
+	visibility:-oxy-collapse-text;		
+	
+}
+
+
+relatedItem > bibl{
+
+	visibility:-oxy-collapse-text;	
+	display: block;
+
+}
+
+
+
+
+relatedItem author name{
+
+	display: block;
+    -oxy-display-tags: none;
+	
+    content: oxy_label(text, "Autor: ", width, 10em, text-align, right)
+             oxy_editor(type, text, edit, "#text", columns, 30);
+			 
+	visibility:-oxy-collapse-text;			 
+
+
+}
+
+relatedItem title{
+
+	display: block;
+    -oxy-display-tags: none;
+	
+    content: oxy_label(text, "Title: ", width, 10em, text-align, right)
+             oxy_editor(type, text, edit, "#text", columns, 30);
+			 
+	visibility:-oxy-collapse-text;			 
+
+
+}
+
+
+/* Seitenzahlen */
+biblScope[unit="page"]{
+
+	display: block;
+    -oxy-display-tags: none;
+	
+    content: oxy_label(text, "Seitenzahlen: ", width, 10em, text-align, right)
+             oxy_editor(type, text, edit, "#text", columns, 30);
+			 
+	visibility:-oxy-collapse-text;	
+	
+
+}
+
+/* Heft-Nr. */
+biblScope[unit="issue"]{
+
+	display: block;
+    -oxy-display-tags: none;
+	
+    content: oxy_label(text, "Ausgabe: ", width, 10em, text-align, right)
+             oxy_editor(type, text, edit, "#text", columns, 30);
+			 
+	visibility:-oxy-collapse-text;	
+	
+
+}
+
+ref{
+
+	display: none;
+	
+}
+
+
+biblStruct > note{
+
+	display: block;
+	margin: 5px;
+	border: 1px solid white;
+	
+	-oxy-display-tags: none;
+	
+    content: oxy_editor(type, text, edit, "#text", columns, 30);
+			 
+	visibility:-oxy-collapse-text;	
+	
+}
+
+biblStruct > note:before{
+
+	content: "Note\A";
+
 }
 
 

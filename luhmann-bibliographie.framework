@@ -45,6 +45,343 @@
 							</field>
 							<field name="actionDescriptors">
 								<action-array>
+<action>
+										<field name="id">
+											<String>add_book</String>
+										</field>
+										<field name="name">
+											<String>Monographie hinzufügen</String>
+										</field>
+										<field name="description">
+											<String>Fügt eine Monographie zur Bibliographie hinzu.</String>
+										</field>
+										<field name="largeIconPath">
+											<String>${framework}/icons/book-open-variant.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>${framework}/icons/book-open-variant.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>				&lt;biblStruct type="book" status="published" xml:id="">
+					&lt;monogr>
+						&lt;author>&lt;name key="">&lt;/name>&lt;/author>
+						&lt;title level="m" type="main">&lt;/title>
+						&lt;title level="m" type="sub">&lt;/title>
+						&lt;editor>
+							&lt;name>&lt;/name>
+							&lt;note type="role">&lt;/note>
+						&lt;/editor>
+						&lt;imprint>
+							&lt;date when="">&lt;/date>
+							&lt;pubPlace>&lt;/pubPlace>
+							&lt;publisher>&lt;/publisher>
+						&lt;/imprint>
+					&lt;/monogr>
+					&lt;idno type="">&lt;/idno>
+				&lt;!-- Wenn enthaltene Artikel einzeln bibliographiert werden sollen -->
+				&lt;relatedItem type="articleIncluded">
+					&lt;bibl status="published" type="relatedItem" xml:id="" sameAs="#">
+						&lt;idno type="">&lt;/idno> &lt;author>&lt;name key="">&lt;/name>&lt;/author>&lt;title type="main">&lt;/title>&lt;biblScope unit="page" from="" to="">&lt;/biblScope>&lt;/bibl>&lt;/relatedItem>
+					&lt;!-- Optional, sollten aber im Template erscheinen -->
+				&lt;relatedItem type="firstPrint">
+					&lt;bibl type="relatedItem">&lt;ref type="" target="#">&lt;/ref>&lt;/bibl>
+				&lt;/relatedItem>
+					&lt;relatedItem type="reprint">
+						&lt;bibl type="relatedItem">Reprint &lt;ref type="" target="#">&lt;/ref>&lt;/bibl>
+					&lt;/relatedItem>
+					&lt;relatedItem type="translation" subtype="">
+						&lt;bibl type="relatedItem">Translation &lt;ref type="" target="#">&lt;/ref>&lt;/bibl>
+					&lt;/relatedItem>
+					&lt;note type="notes_edition">&lt;/note>
+					&lt;note type="notes">&lt;/note>
+					&lt;note type="unsolved">&lt;/note>
+				&lt;/biblStruct></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>/TEI/text/body/listBibl</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as last child</String>
+															</entry>
+															<entry>
+																<String>schemaAware</String>
+																<String>false</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>add_bookSection</String>
+										</field>
+										<field name="name">
+											<String>Buchabschnitt hinzufügen</String>
+										</field>
+										<field name="description">
+											<String>Fügt einen Buchabschnitt zur Bibliographie hinzu.</String>
+										</field>
+										<field name="largeIconPath">
+											<String>${framework}/icons/book-open.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>${framework}/icons/book-open.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;biblStruct type="bookSection" subtype="" status="published" xml:id="">
+					&lt;analytic>
+						&lt;author>&lt;name key="luhmann_niklas">Niklas Luhmann&lt;/name>&lt;/author>
+						&lt;title level="a" type="main"/>
+						&lt;title type="sub"/>
+						&lt;textLang mainLang="de"/>
+						&lt;idno type=""/>
+						&lt;textLang mainLang="de"/>
+					&lt;/analytic>
+					&lt;monogr>
+						&lt;editor> &lt;name key=""/> &lt;/editor>
+						&lt;title level="m" type="main"/>
+						&lt;title type="sub"/>
+						&lt;imprint>
+							&lt;biblScope unit="page" from="" to=""/>
+							&lt;biblScope unit="chapter"/>
+							&lt;pubPlace/>
+							&lt;publisher/>
+							&lt;date when=""/>
+						&lt;/imprint>
+					&lt;/monogr>
+					&lt;!--Wenn subtype='review' obligatorisch-->
+					&lt;relatedItem type="reviewOf">
+						&lt;bibl type="relatedItem" copyOf="#">&lt;/bibl>
+					&lt;/relatedItem>
+					&lt;!-- Optional, sollten aber im Template erscheinen -->
+					&lt;relatedItem type="firstPrint">
+						&lt;bibl type="relatedItem">&lt;ref type="" target="#"/>&lt;/bibl>
+					&lt;/relatedItem>
+					&lt;relatedItem type="reprint">
+						&lt;bibl type="relatedItem">Reprint &lt;ref type="" target="#"/>&lt;/bibl>
+					&lt;/relatedItem>
+					&lt;relatedItem type="translation" subtype="">
+						&lt;bibl type="relatedItem">Translation &lt;ref type="" target="#"/>&lt;/bibl>
+					&lt;/relatedItem>
+					&lt;note type="notes_edition"/>
+					&lt;note type="notes"/>
+					&lt;note type="unsolved"/>
+				&lt;/biblStruct></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>/TEI/text/body/listBibl</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as last child</String>
+															</entry>
+															<entry>
+																<String>schemaAware</String>
+																<String>false</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>add_journalArticle</String>
+										</field>
+										<field name="name">
+											<String>Zeitschriftenartikel hinzufügen</String>
+										</field>
+										<field name="description">
+											<String>Fügt einen Zeitschriften-Artikel zur Bibliographie hinzu.</String>
+										</field>
+										<field name="largeIconPath">
+											<String>${framework}/icons/file-document.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>${framework}/icons/file-document.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;biblStruct type="journalArticle" subtype="review" status="published" xml:id="">
+					&lt;analytic>
+						&lt;author>&lt;name key="luhmann_niklas">Niklas Luhmann&lt;/name>&lt;/author>
+						&lt;title level="a" type="main">&lt;/title>
+						&lt;title type="sub"/>
+						&lt;textLang mainLang="de"/>
+						&lt;idno type="">&lt;/idno>
+						&lt;textLang mainLang="de"/>
+						&lt;textLang mainLang="de"/>
+					&lt;/analytic>
+					&lt;monogr>
+						&lt;title level="j" type="main">&lt;/title>
+						&lt;imprint>
+							&lt;biblScope unit="issue">&lt;/biblScope>
+							&lt;biblScope unit="page" from="" to="">&lt;/biblScope>
+						&lt;/imprint>
+					&lt;/monogr>
+					&lt;!--Wenn subtype='review' obligatorisch-->
+					&lt;relatedItem type="reviewOf">
+						&lt;bibl type="relatedItem" copyOf="#">&lt;/bibl>
+					&lt;/relatedItem>
+					&lt;!-- Optional, sollten aber im Template erscheinen -->
+					&lt;relatedItem type="firstPrint">
+						&lt;bibl type="relatedItem">&lt;ref type="" target="#">&lt;/ref>&lt;/bibl>
+					&lt;/relatedItem>
+					&lt;relatedItem type="reprint">
+						&lt;bibl type="relatedItem">Reprint &lt;ref type="" target="#">&lt;/ref>&lt;/bibl>
+					&lt;/relatedItem>
+					&lt;relatedItem type="translation" subtype="">
+						&lt;bibl type="relatedItem">Translation &lt;ref type="" target="#">&lt;/ref>&lt;/bibl>
+					&lt;/relatedItem>
+					&lt;note type="notes_edition">&lt;/note>
+					&lt;note type="notes">&lt;/note>
+					&lt;note type="unsolved">&lt;/note>
+				&lt;/biblStruct></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>/TEI/text/body/listBibl</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as last child</String>
+															</entry>
+															<entry>
+																<String>schemaAware</String>
+																<String>false</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>insert_author</String>
+										</field>
+										<field name="name">
+											<String>Autor hinzufügen</String>
+										</field>
+										<field name="description">
+											<String>Fügt einen Autor zum bibliografischen Eintrag hinzu</String>
+										</field>
+										<field name="largeIconPath">
+											<String>${framework}/icons/account.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>${framework}/icons/account.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;author>&lt;name>&lt;/name>&lt;/author></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::author</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+															<entry>
+																<String>schemaAware</String>
+																<String>false</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>								
 									<action>
 										<field name="id">
 											<String>page_number</String>
