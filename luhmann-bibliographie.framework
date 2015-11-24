@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<serialized version="17.0" xml:space="preserve">
+<serialized version="17.1" xml:space="preserve">
 	<serializableOrderedMap>
 		<entry>
 			<String>document.types</String>
@@ -45,7 +45,7 @@
 							</field>
 							<field name="actionDescriptors">
 								<action-array>
-<action>
+									<action>
 										<field name="id">
 											<String>add_book</String>
 										</field>
@@ -356,7 +356,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;author>&lt;name>&lt;/name>&lt;/author></String>
+																<String>&lt;author xmlns="http://www.tei-c.org/ns/1.0">&lt;name>&lt;/name>&lt;/author></String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
@@ -381,7 +381,7 @@
 										<field name="enabledInReadOnlyContext">
 											<Boolean>false</Boolean>
 										</field>
-									</action>								
+									</action>
 									<action>
 										<field name="id">
 											<String>page_number</String>
@@ -525,11 +525,11 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;author>&lt;name key="">&lt;/name>&lt;/author></String>
+																<String>&lt;author xmlns="http://www.tei-c.org/ns/1.0">&lt;name key="">&lt;/name>&lt;/author></String>
 															</entry>
 															<entry>
 																<String>schemaAware</String>
-																<String>false</String>
+																<String>true</String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
@@ -813,17 +813,38 @@
 											</toolbarItem>
 											<toolbarItem>
 												<field name="actionID">
+													<String>add_book</String>
+												</field>
+											</toolbarItem>
+											<toolbarItem>
+												<field name="actionID">
+													<String>add_journalArticle</String>
+												</field>
+											</toolbarItem>
+											<toolbarItem>
+												<field name="actionID">
+													<String>add_bookSection</String>
+												</field>
+											</toolbarItem>
+											<toolbarItem>
+												<field name="actionID">
+													<String>insert_author</String>
+												</field>
+											</toolbarItem>
+											<toolbarSeparator/>
+											<toolbarItem>
+												<field name="actionID">
 													<String>tag_author</String>
 												</field>
 											</toolbarItem>
 											<toolbarItem>
 												<field name="actionID">
-													<String>tag_series</String>
+													<String>tag_title</String>
 												</field>
 											</toolbarItem>
 											<toolbarItem>
 												<field name="actionID">
-													<String>tag_title</String>
+													<String>tag_series</String>
 												</field>
 											</toolbarItem>
 											<toolbarItem>
