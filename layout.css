@@ -444,3 +444,29 @@ bibl > note:before{
 }
 
 
+
+/* Related bibl's in unstructured bibl's */
+listBibl > bibl > bibl{
+	
+	display: block;
+	margin: 5px;
+	margin-left: 20px;
+	margin-bottom: 10px;
+	border: 2px solid black;
+	
+	background-color: beige;
+	
+	-oxy-display-tags: none;
+	
+	visibility:-oxy-collapse-text;	
+	
+}
+
+listBibl > bibl > bibl:before{
+	
+	content: "bibl\A";	
+	font-weight: bold;
+	
+}
+
+
