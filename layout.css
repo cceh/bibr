@@ -418,4 +418,29 @@ textLang{
 }
 
 
+bibl > note{
+	
+	display: block;
+	margin: 5px;
+	margin-left: 20px;
+	border: 2px solid black;
+	
+	background-color: beige;
+	
+	-oxy-display-tags: none;
+	
+    content: oxy_editor(type, text, edit, "#text", columns, 50);
+			 
+	visibility:-oxy-collapse-text;	
+	
+	
+}
+
+
+bibl > note:before{
+
+	content: "Note\A";
+
+}
+
 
