@@ -264,9 +264,11 @@ idno{
 relatedItem{
 
 	display: block;
-	
 	margin: 5px;
-	border: 2px solid grey;
+	margin-left: 20px;
+	border: 2px solid black;
+	
+	background-color: lightskyblue;
 	
 	visibility:-oxy-collapse-text;	
 	
@@ -302,6 +304,14 @@ relatedItem[type="reprint"]:before{
 relatedItem[type="translation"]:before{
 
 	content: "Zugehöriges Element (Übersetzung)";
+	visibility:-oxy-collapse-text;		
+	
+}
+
+
+relatedItem[type="reviewOf"]:before{
+
+	content: "Zugehöriges Element (Review of)";
 	visibility:-oxy-collapse-text;		
 	
 }
@@ -383,7 +393,10 @@ biblStruct > note{
 
 	display: block;
 	margin: 5px;
-	border: 1px solid white;
+	margin-left: 20px;
+	border: 2px solid black;
+	
+	background-color: beige;
 	
 	-oxy-display-tags: none;
 	
@@ -397,6 +410,11 @@ biblStruct > note:before{
 
 	content: "Note\A";
 
+}
+
+
+textLang{
+	display: none;
 }
 
 

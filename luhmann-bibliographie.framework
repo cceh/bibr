@@ -751,6 +751,120 @@
 											<Boolean>false</Boolean>
 										</field>
 									</action>
+									<action>
+										<field name="id">
+											<String>add_relatedItem</String>
+										</field>
+										<field name="name">
+											<String>Zugehöriges Element hinzufügen</String>
+										</field>
+										<field name="description">
+											<String>Fügt ein zugehöriges Element zum aktuellen bibliographischen Eintrag hinzu.</String>
+										</field>
+										<field name="largeIconPath">
+											<String>${framework}/icons/sitemap.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>${framework}/icons/sitemap.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;relatedItem type="" xmlns="http://www.tei-c.org/ns/1.0">
+	&lt;bibl status="" type="relatedItem" sameAs="#">
+		&lt;idno type="">&lt;/idno>
+    	     &lt;author>&lt;name key="">&lt;/name>&lt;/author>&lt;title type="main">&lt;/title>
+	  &lt;biblScope unit="page" from="" to="">&lt;/biblScope>
+	&lt;/bibl>
+&lt;/relatedItem></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::biblStruct</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as last child</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>add_note</String>
+										</field>
+										<field name="name">
+											<String>Note hinzufügen</String>
+										</field>
+										<field name="description">
+											<String>Fügt eine Notiz zum aktuellen bibliographischen Eintrag hinzu.</String>
+										</field>
+										<field name="largeIconPath">
+											<String>${framework}/icons/note-plus-outline.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>${framework}/icons/note-plus-outline.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;note type="unsolved" xmlns="http://www.tei-c.org/ns/1.0">&lt;/note></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::biblStruct</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as last child</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
 								</action-array>
 							</field>
 							<field name="menubarDescriptor">
@@ -829,6 +943,16 @@
 											<toolbarItem>
 												<field name="actionID">
 													<String>insert_author</String>
+												</field>
+											</toolbarItem>
+											<toolbarItem>
+												<field name="actionID">
+													<String>add_relatedItem</String>
+												</field>
+											</toolbarItem>
+											<toolbarItem>
+												<field name="actionID">
+													<String>add_note</String>
 												</field>
 											</toolbarItem>
 											<toolbarSeparator/>
