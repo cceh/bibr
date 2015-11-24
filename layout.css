@@ -462,9 +462,23 @@ listBibl > bibl > bibl{
 	
 }
 
-listBibl > bibl > bibl:before{
+listBibl > bibl > bibl[type="journalArticle"]:before{
 	
-	content: "bibl\A";	
+	content: "Bibliographischer Eintrag (Zeitschriftenartikel)\A";	
+	font-weight: bold;
+	
+}
+
+listBibl > bibl > bibl[type="journal"]:before{
+	
+	content: "Bibliographischer Eintrag (Zeitschrift)\A";	
+	font-weight: bold;
+	
+}
+
+listBibl > bibl > bibl[type="book"]:before{
+	
+	content: "Bibliographischer Eintrag (Buch)\A";	
 	font-weight: bold;
 	
 }
