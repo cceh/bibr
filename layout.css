@@ -430,7 +430,6 @@ bibl > note{
 	-oxy-display-tags: none;
 	
     content: oxy_editor(type, text, edit, "#text", columns, 50);
-			 
 	visibility:-oxy-collapse-text;	
 	
 	
