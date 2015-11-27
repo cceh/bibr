@@ -443,6 +443,14 @@ bibl > note:before{
 }
 
 
+bibl > note[type="unsolved"]:before, biblStruct > note[type="unsolved"]:before{
+
+	content: "Note (unsolved)\A";
+
+}
+
+
+
 
 /* Related bibl's in unstructured bibl's */
 listBibl > bibl > bibl{

@@ -384,6 +384,56 @@
 									</action>
 									<action>
 										<field name="id">
+											<String>page_number</String>
+										</field>
+										<field name="name">
+											<String>Seitenzahlen auszeichnen</String>
+										</field>
+										<field name="description">
+											<String>Zeichnet Seitenzahlen aus</String>
+										</field>
+										<field name="largeIconPath">
+											<String>${framework}/icons/numeric.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>${framework}/icons/numeric.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>element</String>
+																<String>&lt;biblScope unit="page" from="" to="" /></String>
+															</entry>
+															<entry>
+																<String>schemaAware</String>
+																<String>false</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ToggleSurroundWithElementOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
 											<String>add_listBibl</String>
 										</field>
 										<field name="name">
@@ -445,6 +495,106 @@
 									</action>
 									<action>
 										<field name="id">
+											<String>tag_author</String>
+										</field>
+										<field name="name">
+											<String>Autor auszeichnen</String>
+										</field>
+										<field name="description">
+											<String>Zeichnet den Autor aus.</String>
+										</field>
+										<field name="largeIconPath">
+											<String>${framework}/icons/account.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>${framework}/icons/account.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;author xmlns="http://www.tei-c.org/ns/1.0">&lt;name key="">&lt;/name>&lt;/author></String>
+															</entry>
+															<entry>
+																<String>schemaAware</String>
+																<String>true</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>tag_date</String>
+										</field>
+										<field name="name">
+											<String>Datum auszeichnen</String>
+										</field>
+										<field name="description">
+											<String>Zeichnet ein Datum aus.</String>
+										</field>
+										<field name="largeIconPath">
+											<String>${framework}/icons/calendar.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>${framework}/icons/calendar.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>element</String>
+																<String>&lt;date when="" /></String>
+															</entry>
+															<entry>
+																<String>schemaAware</String>
+																<String>false</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ToggleSurroundWithElementOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
 											<String>add_bibl</String>
 										</field>
 										<field name="name">
@@ -493,6 +643,106 @@
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>tag_series</String>
+										</field>
+										<field name="name">
+											<String>Publikations-Reihe auszeichnen</String>
+										</field>
+										<field name="description">
+											<String>Zeichnet eine Publikations-Reihe, wie z. B. eine Zeitschrifte-Reihe aus</String>
+										</field>
+										<field name="largeIconPath">
+											<String>${framework}/icons/library-books.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>${framework}/icons/library-books.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>element</String>
+																<String>&lt;series/></String>
+															</entry>
+															<entry>
+																<String>schemaAware</String>
+																<String>false</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ToggleSurroundWithElementOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>tag_title</String>
+										</field>
+										<field name="name">
+											<String>Titel auszeichnen</String>
+										</field>
+										<field name="description">
+											<String>Zeichnet einen Titel aus.</String>
+										</field>
+										<field name="largeIconPath">
+											<String>${framework}/icons/book-open-variant.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>${framework}/icons/book-open-variant.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>element</String>
+																<String>&lt;title level="" type="main"></String>
+															</entry>
+															<entry>
+																<String>schemaAware</String>
+																<String>false</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ToggleSurroundWithElementOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
@@ -703,6 +953,32 @@
 											<toolbarItem>
 												<field name="actionID">
 													<String>add_note</String>
+												</field>
+											</toolbarItem>
+											<toolbarSeparator/>
+											<toolbarItem>
+												<field name="actionID">
+													<String>tag_author</String>
+												</field>
+											</toolbarItem>
+											<toolbarItem>
+												<field name="actionID">
+													<String>tag_title</String>
+												</field>
+											</toolbarItem>
+											<toolbarItem>
+												<field name="actionID">
+													<String>tag_series</String>
+												</field>
+											</toolbarItem>
+											<toolbarItem>
+												<field name="actionID">
+													<String>page_number</String>
+												</field>
+											</toolbarItem>
+											<toolbarItem>
+												<field name="actionID">
+													<String>tag_date</String>
 												</field>
 											</toolbarItem>
 										</toolbarEntry-array>
