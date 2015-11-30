@@ -108,7 +108,7 @@ author name {
     -oxy-display-tags: none;
 	
     content: oxy_label(text, "Author: ", width, 10em, text-align, right)
-             oxy_editor(type, text, edit, "#text", columns, 30)
+             oxy_editor(type, text, edit, "#text", columns, 60)
 			 oxy_editor(type, button, actionID, insert_author, transparent, true, color, #FFFFFF);
 			 
 	visibility:-oxy-collapse-text;
@@ -122,7 +122,7 @@ title[type="main"] {
     -oxy-display-tags: none;
 	
     content: oxy_label(text, "Title: ", width, 10em, text-align, right)
-             oxy_editor(type, text, edit, "#text", columns, 30);
+             oxy_editor(type, text, edit, "#text", columns, 60);
 			 
 	visibility:-oxy-collapse-text;			 
 
@@ -136,7 +136,7 @@ title[type="sub"] {
     -oxy-display-tags: none;
 	
     content: oxy_label(text, "Subtitle: ", width, 10em, text-align, right)
-             oxy_editor(type, text, edit, "#text", columns, 30);
+             oxy_editor(type, text, edit, "#text", columns, 60);
 			 
 	visibility:-oxy-collapse-text;			 
 
@@ -150,7 +150,7 @@ editor name{
     -oxy-display-tags: none;
 	
     content: oxy_label(text, "Editor: ", width, 10em, text-align, right)
-             oxy_editor(type, text, edit, "#text", columns, 30);
+             oxy_editor(type, text, edit, "#text", columns, 60);
 			 
 	visibility:-oxy-collapse-text;			 
 
@@ -165,7 +165,7 @@ editor > note[type="role"]{
     -oxy-display-tags: none;
 	
     content: oxy_label(text, "Editor Role: ", width, 10em, text-align, right)
-             oxy_editor(type, text, edit, "#text", columns, 30);
+             oxy_editor(type, text, edit, "#text", columns, 60);
 			 
 	visibility:-oxy-collapse-text;			 
 
@@ -203,7 +203,7 @@ date{
     -oxy-display-tags: none;
 	
     content: oxy_label(text, "Date: ", width, 10em, text-align, right)
-             oxy_editor(type, text, edit, "#text", columns, 30);
+             oxy_editor(type, text, edit, "#text", columns, 60);
 			 
 	visibility:-oxy-collapse-text;			 
 
@@ -217,7 +217,7 @@ pubPlace{
     -oxy-display-tags: none;
 	
     content: oxy_label(text, "Publication Place: ", width, 10em, text-align, right)
-             oxy_editor(type, text, edit, "#text", columns, 30);
+             oxy_editor(type, text, edit, "#text", columns, 60);
 			 
 	visibility:-oxy-collapse-text;			 
 
@@ -231,7 +231,7 @@ publisher{
     -oxy-display-tags: none;
 	
     content: oxy_label(text, "Publisher: ", width, 10em, text-align, right)
-             oxy_editor(type, text, edit, "#text", columns, 30);
+             oxy_editor(type, text, edit, "#text", columns, 60);
 			 
 	visibility:-oxy-collapse-text;			 
 
@@ -245,7 +245,7 @@ idno{
     -oxy-display-tags: none;
 	
     content: oxy_label(text, "IDNO: ", width, 10em, text-align, right)
-             oxy_editor(type, text, edit, "#text", columns, 30);
+             oxy_editor(type, text, edit, "#text", columns, 60);
 			 
 	visibility:-oxy-collapse-text;			 
 
@@ -333,7 +333,7 @@ relatedItem author name{
     -oxy-display-tags: none;
 	
     content: oxy_label(text, "Author: ", width, 10em, text-align, right)
-             oxy_editor(type, text, edit, "#text", columns, 30);
+             oxy_editor(type, text, edit, "#text", columns, 60);
 			 
 	visibility:-oxy-collapse-text;			 
 
@@ -346,7 +346,7 @@ relatedItem title{
     -oxy-display-tags: none;
 	
     content: oxy_label(text, "Title: ", width, 10em, text-align, right)
-             oxy_editor(type, text, edit, "#text", columns, 30);
+             oxy_editor(type, text, edit, "#text", columns, 60);
 			 
 	visibility:-oxy-collapse-text;			 
 
@@ -361,7 +361,7 @@ biblScope[unit="page"]{
     -oxy-display-tags: none;
 	
     content: oxy_label(text, "Page Numbers: ", width, 10em, text-align, right)
-             oxy_editor(type, text, edit, "#text", columns, 30);
+             oxy_editor(type, text, edit, "#text", columns, 60);
 			 
 	visibility:-oxy-collapse-text;	
 	
@@ -376,7 +376,7 @@ biblScope[unit="chapter"]{
     -oxy-display-tags: none;
 	
     content: oxy_label(text, "Chapter: ", width, 10em, text-align, right)
-             oxy_editor(type, text, edit, "#text", columns, 30);
+             oxy_editor(type, text, edit, "#text", columns, 60);
 			 
 	visibility:-oxy-collapse-text;	
 	
@@ -392,7 +392,7 @@ biblScope[unit="issue"]{
     -oxy-display-tags: none;
 	
     content: oxy_label(text, "Issue: ", width, 10em, text-align, right)
-             oxy_editor(type, text, edit, "#text", columns, 30);
+             oxy_editor(type, text, edit, "#text", columns, 60);
 			 
 	visibility:-oxy-collapse-text;	
 	
@@ -417,7 +417,7 @@ biblStruct > note{
 	
 	-oxy-display-tags: none;
 	
-    content: oxy_editor(type, text, edit, "#text", columns, 30);
+    content: oxy_editor(type, text, edit, "#text", columns, 60);
 			 
 	visibility:-oxy-collapse-text;	
 	
@@ -507,7 +507,7 @@ background-color: lavender;
 
 analytic:before{
 
-	content: "analytic";
+	content: "Analytic";
 	font-weight: bold;
 
 }
@@ -526,7 +526,7 @@ background-color: lightgreen;
 
 monogr:before{
 
-	content: "monogr";
+	content: "Monogr";
 	font-weight: bold;
 
 }
