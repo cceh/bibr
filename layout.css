@@ -109,7 +109,8 @@ author name {
 	
     content: oxy_label(text, "Author: ", width, 10em, text-align, right)
              oxy_editor(type, text, edit, "#text", columns, 60)
-			 oxy_editor(type, button, actionID, insert_author, transparent, true, color, #FFFFFF);
+			 oxy_editor(type, button, actionID, insert_author, transparent, true, color, #FFFFFF)
+			 oxy_editor(type, button, actionID, delete_author, transparent, true, color, #FFFFFF);
 			 
 	visibility:-oxy-collapse-text;
 

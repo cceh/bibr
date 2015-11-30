@@ -617,6 +617,52 @@
 											<Boolean>false</Boolean>
 										</field>
 									</action>
+									<action>
+										<field name="id">
+											<String>delete_author</String>
+										</field>
+										<field name="name">
+											<String>Aktuellen Author löschen</String>
+										</field>
+										<field name="description">
+											<String>Löscht den aktuellen Autor</String>
+										</field>
+										<field name="largeIconPath">
+											<String>${framework}/icons/delete.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>${framework}/icons/delete.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>elementLocations</String>
+																<String>ancestor-or-self::author</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.DeleteElementsOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
 								</action-array>
 							</field>
 							<field name="menubarDescriptor">
