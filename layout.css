@@ -82,8 +82,8 @@ series{
 
 
 
-/* Main entries in a list bibl */
-listBibl > biblStruct, listBibl > bibl{
+/* Main entries in a listBibl */
+listBibl > biblStruct {
 
 	margin-bottom: 10px;
 	border: 10px solid #000000;
@@ -94,7 +94,7 @@ listBibl > biblStruct, listBibl > bibl{
 listBibl > biblStruct:before{
 
 	
-	content: "biblStruct";
+	content: "biblStruct (" attr(type) ")";
 	font-size: 15pt;
 	font-weight: bold;
 
@@ -172,6 +172,12 @@ editor > note[type="role"]{
 
 }
 
+editor > note[type="role"]:before{
+
+	content: "" !important;
+
+}
+
 
 imprint {
 
@@ -185,7 +191,7 @@ imprint {
 imprint:before{
 
 	content: "Imprint";
-	font-size: 14pt;
+	font-weight: bold;
 
 
 }
@@ -268,7 +274,8 @@ relatedItem{
 relatedItem[type="articleIncluded"]:before{
 
 	content: "Related Item (Article Included)";
-	visibility:-oxy-collapse-text;		
+	visibility:-oxy-collapse-text;	
+	font-weight: bold;	
 	
 }
 
@@ -276,7 +283,8 @@ relatedItem[type="articleIncluded"]:before{
 relatedItem[type="firstPrint"]:before{
 
 	content: "Related Item (First Print)";
-	visibility:-oxy-collapse-text;		
+	visibility:-oxy-collapse-text;	
+	font-weight: bold;	
 	
 }
 
@@ -284,7 +292,8 @@ relatedItem[type="firstPrint"]:before{
 relatedItem[type="reprint"]:before{
 
 	content: "Related Item (Reprint)";
-	visibility:-oxy-collapse-text;		
+	visibility:-oxy-collapse-text;
+	font-weight: bold;	
 	
 }
 
@@ -293,7 +302,8 @@ relatedItem[type="reprint"]:before{
 relatedItem[type="translation"]:before{
 
 	content: "Related Item (Translation)";
-	visibility:-oxy-collapse-text;		
+	visibility:-oxy-collapse-text;	
+	font-weight: bold;	
 	
 }
 
@@ -301,7 +311,8 @@ relatedItem[type="translation"]:before{
 relatedItem[type="reviewOf"]:before{
 
 	content: "Related Item (Review of)";
-	visibility:-oxy-collapse-text;		
+	visibility:-oxy-collapse-text;	
+	font-weight: bold;	
 	
 }
 
@@ -436,19 +447,12 @@ bibl > note{
 }
 
 
-bibl > note:before, biblStruct > note:before{
+note:before{
 
 	content: "Note (" attr(type) ")\A";
+	font-weight: bold;
 
 }
-
-
-bibl > note[type="unsolved"]:before, biblStruct > note[type="unsolved"]:before{
-
-	content: "Note (unsolved)\A";
-
-}
-
 
 
 
@@ -491,3 +495,38 @@ listBibl > bibl > bibl[type="book"]:before{
 }
 
 
+analytic{
+
+border-left: 2px solid grey;
+margin-left: 10px;
+background-color: lavender;
+
+
+}
+
+
+analytic:before{
+
+	content: "analytic";
+	font-weight: bold;
+
+}
+
+
+
+monogr{
+
+border-left: 2px solid grey;
+margin-left: 10px;
+background-color: lightgreen;
+
+
+}
+
+
+monogr:before{
+
+	content: "monogr";
+	font-weight: bold;
+
+}
