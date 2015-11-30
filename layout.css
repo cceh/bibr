@@ -412,12 +412,6 @@ biblStruct > note{
 	
 }
 
-biblStruct > note:before{
-
-	content: "Note\A";
-
-}
-
 
 textLang{
 	display: none;
@@ -442,9 +436,9 @@ bibl > note{
 }
 
 
-bibl > note:before{
+bibl > note:before, biblStruct > note:before{
 
-	content: "Note\A";
+	content: "Note (" attr(type) ")\A";
 
 }
 
