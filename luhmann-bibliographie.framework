@@ -178,7 +178,9 @@
 						&lt;textLang mainLang="de"/>
 					&lt;/analytic>
 					&lt;monogr>
-						&lt;editor> &lt;name key=""/> &lt;/editor>
+						&lt;editor> &lt;name key=""/> 
+							&lt;note type="role">&lt;/note>
+						&lt;/editor>
 						&lt;title level="m" type="main"/>
 						&lt;title type="sub"/>
 						&lt;imprint>
