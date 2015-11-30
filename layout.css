@@ -357,6 +357,23 @@ biblScope[unit="page"]{
 
 }
 
+
+/* Kapitel */
+biblScope[unit="chapter"]{
+
+	display: block;
+    -oxy-display-tags: none;
+	
+    content: oxy_label(text, "Chapter: ", width, 10em, text-align, right)
+             oxy_editor(type, text, edit, "#text", columns, 30);
+			 
+	visibility:-oxy-collapse-text;	
+	
+
+}
+
+
+
 /* Heft-Nr. */
 biblScope[unit="issue"]{
 
