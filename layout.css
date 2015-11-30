@@ -397,8 +397,17 @@ biblScope[unit="issue"]{
 
 ref{
 
-	/* TO DO: Link refs to target attribute */
+
 	
+}
+
+ref:after{
+
+	link: attr(target);
+	text-decoration: underline;
+	color: blue;
+	content: "(Click to open)";
+
 }
 
 
