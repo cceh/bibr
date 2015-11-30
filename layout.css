@@ -265,9 +265,6 @@ relatedItem{
 	
 	background-color: lightskyblue;
 	
-	visibility:-oxy-collapse-text;	
-	
-
 
 }
 
@@ -319,7 +316,6 @@ relatedItem[type="reviewOf"]:before{
 
 relatedItem > bibl{
 
-	visibility:-oxy-collapse-text;	
 	display: block;
 
 }
@@ -401,12 +397,12 @@ biblScope[unit="issue"]{
 
 ref{
 
-	display: none;
+	/* TO DO: Link refs to target attribute */
 	
 }
 
 
-biblStruct > note{
+biblStruct > note, bibl > note, relatedItem > note{
 
 	display: block;
 	margin: 5px;
@@ -417,9 +413,6 @@ biblStruct > note{
 	
 	-oxy-display-tags: none;
 	
-    content: oxy_editor(type, text, edit, "#text", columns, 60);
-			 
-	visibility:-oxy-collapse-text;	
 	
 }
 
@@ -429,22 +422,6 @@ textLang{
 }
 
 
-bibl > note{
-	
-	display: block;
-	margin: 5px;
-	margin-left: 20px;
-	border: 2px solid black;
-	
-	background-color: beige;
-	
-	-oxy-display-tags: none;
-	
-    content: oxy_editor(type, text, edit, "#text", columns, 50);
-	visibility:-oxy-collapse-text;	
-	
-	
-}
 
 
 note:before{
@@ -466,10 +443,6 @@ listBibl > bibl > bibl{
 	border: 2px solid black;
 	
 	background-color: beige;
-	
-	-oxy-display-tags: none;
-	
-	visibility:-oxy-collapse-text;	
 	
 }
 
