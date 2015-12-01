@@ -94,7 +94,7 @@ listBibl > biblStruct {
 listBibl > biblStruct:before{
 
 	
-	content: "biblStruct (" attr(type) ")";
+	content: "biblStruct (" attr(type) ") " oxy_editor(type, button, actionID, delete_biblStruct, transparent, true, color, #FFFFFF);;
 	font-size: 15pt;
 	font-weight: bold;
 
