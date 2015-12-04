@@ -180,6 +180,20 @@ editor > note[type="role"]:before{
 }
 
 
+edition{
+
+	display: block;
+    -oxy-display-tags: none;
+	
+    content: oxy_label(text, "Edition: ", width, 10em, text-align, right)
+             oxy_editor(type, text, edit, "#text", columns, 60);
+			 
+	visibility:-oxy-collapse-text;			 
+
+
+}
+
+
 imprint {
 
 	display: block;
@@ -196,6 +210,7 @@ imprint:before{
 
 
 }
+
 
 
 date{
