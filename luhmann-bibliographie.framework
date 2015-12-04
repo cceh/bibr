@@ -501,11 +501,7 @@
 															<entry>
 																<String>fragment</String>
 																<String>&lt;relatedItem type="" xmlns="http://www.tei-c.org/ns/1.0">
-	&lt;bibl status="" type="relatedItem" sameAs="#">
-		&lt;idno type="">&lt;/idno>
-    	     &lt;author>&lt;name key="">&lt;/name>&lt;/author>&lt;title type="main">&lt;/title>
-	  &lt;biblScope unit="page" from="" to="">&lt;/biblScope>
-	&lt;/bibl>
+ &lt;bibl type="relatedItem">&lt;/bibl>
 &lt;/relatedItem></String>
 															</entry>
 															<entry>
