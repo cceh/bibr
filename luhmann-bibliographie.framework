@@ -801,7 +801,7 @@
 					&lt;imprint>
 						&lt;pubPlace>&lt;/pubPlace>
 						&lt;publisher>&lt;/publisher>
-						&lt;biblScope unit="page" from="" to="">9&lt;/biblScope>
+						&lt;biblScope unit="page" from="" to="">&lt;/biblScope>
 					&lt;/imprint>
 				&lt;/monogr>
 				&lt;series>
