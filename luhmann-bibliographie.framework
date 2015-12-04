@@ -757,6 +757,82 @@
 											<Boolean>false</Boolean>
 										</field>
 									</action>
+									<action>
+										<field name="id">
+											<String>add_articleIncluded</String>
+										</field>
+										<field name="name">
+											<String>Unterartikel hinzufügen</String>
+										</field>
+										<field name="description">
+											<String>Unterartikel hinzufügen</String>
+										</field>
+										<field name="largeIconPath">
+											<String>${framework}/icons/plus.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>${framework}/icons/plus.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;relatedItem type="articleIncluded" xmlns="http://www.tei-c.org/ns/1.0">
+				&lt;biblStruct status="published" type="bookSection" xml:id="" corresp="#">
+				&lt;analytic>
+					&lt;title level="a" type="main">&lt;/title>
+					&lt;title level="a" type="sub"/>
+					&lt;idno type="">&lt;/idno>
+					&lt;textLang mainLang="de"/>
+				&lt;/analytic>
+				&lt;monogr>
+					&lt;title level="m" type="main">&lt;/title>
+					&lt;title level="m" type="sub">&lt;/title>
+					&lt;editor>&lt;name key="#"/>&lt;note type="role"/>&lt;/editor>
+					&lt;edition>&lt;/edition>
+					&lt;imprint>
+						&lt;pubPlace>&lt;/pubPlace>
+						&lt;publisher>&lt;/publisher>
+						&lt;biblScope unit="page" from="" to="">9&lt;/biblScope>
+					&lt;/imprint>
+				&lt;/monogr>
+				&lt;series>
+					&lt;title level="s" type="main"/>&lt;title level="s" type="sub"/>&lt;/series>
+			&lt;/biblStruct>
+			&lt;/relatedItem></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::biblStruct</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as last child</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
 								</action-array>
 							</field>
 							<field name="menubarDescriptor">
@@ -840,6 +916,11 @@
 											<toolbarItem>
 												<field name="actionID">
 													<String>add_note</String>
+												</field>
+											</toolbarItem>
+											<toolbarItem>
+												<field name="actionID">
+													<String>add_articleIncluded</String>
 												</field>
 											</toolbarItem>
 										</toolbarEntry-array>
