@@ -411,6 +411,22 @@ biblScope[unit="issue"]{
 
 }
 
+
+biblScope[unit="volume"]{
+
+	display: block;
+    -oxy-display-tags: none;
+	
+    content: oxy_label(text, "Volume: ", width, 10em, text-align, right)
+             oxy_editor(type, text, edit, "#text", columns, 60);
+			 
+	visibility:-oxy-collapse-text;	
+	
+
+}
+
+
+
 ref{
 
 
@@ -506,6 +522,25 @@ background-color: lavender;
 analytic:before{
 
 	content: "Analytic";
+	font-weight: bold;
+
+}
+
+
+series{
+
+border-left: 2px solid grey;
+margin-left: 10px;
+background-color: tomato;
+font-weight: normal;
+
+
+}
+
+
+series:before{
+
+	content: "series";
 	font-weight: bold;
 
 }
