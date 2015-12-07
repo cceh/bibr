@@ -459,7 +459,13 @@ biblStruct > note, bibl > note, relatedItem > note{
 
 
 textLang{
-	display: none;
+	display: block;
+    -oxy-display-tags: none;
+	
+    content: oxy_label(text, "textLang: ", width, 10em, text-align, right)
+			 oxy_editor(type, combo, edit, "@mainLang", editable, false, values, "de, en, fr", labels, "Deutsch, Englisch, Französisch", columns, 60);
+			 
+	visibility:-oxy-collapse-text;	
 }
 
 
