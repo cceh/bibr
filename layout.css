@@ -49,7 +49,7 @@ front {
 	
 	margin-bottom: 20px;
 	padding: 20px;
-	border: 2px solid #778899; /* LightSLateGrey */
+	border: 2px solid #778899; /* LightSLategray */
 	font-size: larger;
 	display: block;
 	
@@ -86,7 +86,9 @@ series{
 listBibl > biblStruct {
 
 	margin-bottom: 10px;
-	border: 10px solid #67737e; /* darker LightSLateGrey */
+	border: 10px solid #778899; /* LightSLateGray */
+	
+	padding-bottom: 5px;
 
 }
 
@@ -97,6 +99,8 @@ listBibl > biblStruct:before{
 	content: "biblStruct (" attr(type) ") " oxy_editor(type, button, actionID, delete_biblStruct, transparent, true, color, #FFFFFF);;
 	font-size: 15pt;
 	font-weight: bold;
+	
+	padding-left: 5px;
 
 
 }
@@ -209,6 +213,8 @@ imprint:before{
 
 	content: "Imprint";
 	font-weight: bold;
+	
+	padding-left: 5px;
 
 
 }
@@ -279,9 +285,10 @@ relatedItem{
 	display: block;
 	margin: 5px;
 	margin-left: 20px;
-	border: 2px solid #545c54; /* darker slategrey */
+	border: 2px solid #545c54; /* darker slategray */
 	
 	background-color: #b6d5fb; /* lighter cornflowerblue */
+	padding-left: 5px;
 	
 
 }
@@ -450,9 +457,10 @@ biblStruct > note, bibl > note, relatedItem > note{
 	display: block;
 	margin: 5px;
 	margin-left: 20px;
-	border: 2px solid #545c54; /* darker slategrey */
+	border: 2px solid #545c54; /* darker slategray */
 	
 	background-color: linen;
+	padding-left: 5px;
 	
 	-oxy-display-tags: none;
 	
@@ -489,7 +497,7 @@ listBibl > bibl > bibl{
 	margin: 5px;
 	margin-left: 20px;
 	margin-bottom: 10px;
-	border: 2px solid #545c54; /* darker slategrey */
+	border: 2px solid #545c54; /* darker slategray */
 	
 	background-color: linen;
 	
@@ -519,7 +527,7 @@ listBibl > bibl > bibl[type="book"]:before{
 
 analytic{
 
-border-left: 2px solid grey;
+border-left: 2px solid #67737e; /* darker LightSLategray */
 margin-left: 10px;
 background-color: #dbdbf7; /* darker lavender */
 
@@ -532,12 +540,14 @@ analytic:before{
 	content: "Analytic";
 	font-weight: bold;
 
+	padding-left: 5px;
+
 }
 
 
 series{
 
-border-left: 2px solid grey;
+border-left: 2px solid #67737e; /* darker LightSLategray */
 margin-left: 10px;
 background-color: #ffc7b3;
 font-weight: normal;
@@ -550,6 +560,8 @@ series:before{
 
 	content: "series";
 	font-weight: bold;
+	
+	padding-left: 5px;
 
 }
 
@@ -557,7 +569,7 @@ series:before{
 
 monogr{
 
-border-left: 2px solid grey;
+border-left: 2px solid #67737e; /* darker LightSLategray */
 margin-left: 10px;
 background-color: #adebeb; /* lighter LightSeaGreen */
 
@@ -569,5 +581,7 @@ monogr:before{
 
 	content: "Monogr";
 	font-weight: bold;
+	
+	padding-left: 5px;
 
 }
