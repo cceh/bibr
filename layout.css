@@ -49,7 +49,7 @@ front {
 	
 	margin-bottom: 20px;
 	padding: 20px;
-	border: 2px solid blue;
+	border: 2px solid #778899; /* LightSLateGrey */
 	font-size: larger;
 	display: block;
 	
@@ -86,7 +86,7 @@ series{
 listBibl > biblStruct {
 
 	margin-bottom: 10px;
-	border: 10px solid #000000;
+	border: 10px solid #67737e; /* darker LightSLateGrey */
 
 }
 
@@ -277,9 +277,9 @@ relatedItem{
 	display: block;
 	margin: 5px;
 	margin-left: 20px;
-	border: 2px solid black;
+	border: 2px solid #545c54; /* darker slategrey */
 	
-	background-color: lightskyblue;
+	background-color: #b6d5fb; /* lighter cornflowerblue */
 	
 
 }
@@ -448,9 +448,9 @@ biblStruct > note, bibl > note, relatedItem > note{
 	display: block;
 	margin: 5px;
 	margin-left: 20px;
-	border: 2px solid black;
+	border: 2px solid #545c54; /* darker slategrey */
 	
-	background-color: beige;
+	background-color: linen;
 	
 	-oxy-display-tags: none;
 	
@@ -487,9 +487,9 @@ listBibl > bibl > bibl{
 	margin: 5px;
 	margin-left: 20px;
 	margin-bottom: 10px;
-	border: 2px solid black;
+	border: 2px solid #545c54; /* darker slategrey */
 	
-	background-color: beige;
+	background-color: linen;
 	
 }
 
@@ -519,7 +519,7 @@ analytic{
 
 border-left: 2px solid grey;
 margin-left: 10px;
-background-color: lavender;
+background-color: #dbdbf7; /* darker lavender */
 
 
 }
@@ -557,7 +557,7 @@ monogr{
 
 border-left: 2px solid grey;
 margin-left: 10px;
-background-color: lightgreen;
+background-color: #adebeb; /* lighter LightSeaGreen */
 
 
 }
