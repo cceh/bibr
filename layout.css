@@ -161,11 +161,19 @@ editor name{
 }
 
 /* don't make a textfield, when there is the element forename within name or editor */
-author name! forename, editor name! forename{
+author name! forename{
 	
 	content: oxy_label(text, "Author: ", width, 10em, text-align, right) !important;
 	
 }
+
+
+editor name! forename{
+
+	content: oxy_label(text, "Editor: ", width, 10em, text-align, right) !important;
+	
+}
+
 
 forename{
 	
