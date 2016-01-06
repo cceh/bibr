@@ -79,13 +79,13 @@
 																<String>fragment</String>
 																<String>&lt;biblStruct type="book" status="published" xml:id="" xmlns="http://www.tei-c.org/ns/1.0">
 					&lt;monogr>
-						&lt;author>&lt;name key="">&lt;/name>&lt;/author>
+						&lt;author>&lt;name key="">&lt;forename>&lt;/forename> &lt;surname>&lt;/surname>&lt;/name>&lt;/author>
 						&lt;title level="m" type="main">&lt;/title>
 						&lt;title level="m" type="sub">&lt;/title>
 						&lt;idno type="">&lt;/idno>
 						&lt;textLang mainLang="de"/>
 						&lt;editor>
-							&lt;name>&lt;/name>
+							&lt;name>&lt;forename>&lt;/forename> &lt;surname>&lt;/surname>&lt;/name>
 							&lt;note type="role">&lt;/note>
 						&lt;/editor>
 						&lt;edition>&lt;/edition>
@@ -160,14 +160,14 @@
 																<String>fragment</String>
 																<String>&lt;biblStruct type="bookSection" subtype="undefined" status="published" xml:id="" xmlns="http://www.tei-c.org/ns/1.0">
 					&lt;analytic>
-						&lt;author>&lt;name key="#">&lt;/name>&lt;/author>
+						&lt;author>&lt;name key="#">&lt;forename>&lt;/forename> &lt;surname>&lt;/surname>&lt;/name>&lt;/author>
 						&lt;title level="a" type="main"/>
 						&lt;title level="a" type="sub"/>
 						&lt;idno type=""/>
 						&lt;textLang mainLang="de"/>
 					&lt;/analytic>
 					&lt;monogr>
-						&lt;editor>&lt;name key=""/>&lt;/editor>
+						&lt;editor>&lt;name key="">&lt;forename>&lt;/forename> &lt;surname>&lt;/surname>&lt;/name>&lt;/editor>
 						&lt;title level="m" type="main"/>
 						&lt;title level="m" type="sub"/>
 						&lt;editor>
@@ -244,7 +244,7 @@
 																<String>fragment</String>
 																<String>&lt;biblStruct type="journalArticle" subtype="undefined" status="published" xml:id="" xmlns="http://www.tei-c.org/ns/1.0">
 					&lt;analytic>
-						&lt;author>&lt;name key="#">&lt;/name>&lt;/author>
+						&lt;author>&lt;name key="#">&lt;forename>&lt;/forename> &lt;surname>&lt;/surname>&lt;/name>&lt;/author>
 						&lt;title level="a" type="main">&lt;/title>
 						&lt;title level="a" type="sub"/>
 						&lt;idno type="">&lt;/idno>
@@ -254,7 +254,7 @@
 						&lt;title level="j" type="main">&lt;/title>
 						&lt;title level="j" type="sub">&lt;/title>
 						&lt;editor>
-							&lt;name key="#"/>
+							&lt;name key="#">&lt;forename>&lt;/forename> &lt;surname>&lt;/surname>&lt;/name>
 							&lt;note type="role">&lt;/note>
 						&lt;/editor>
 						&lt;edition>&lt;/edition>
@@ -323,7 +323,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;author xmlns="http://www.tei-c.org/ns/1.0">&lt;name>&lt;/name>&lt;/author></String>
+																<String>&lt;author xmlns="http://www.tei-c.org/ns/1.0">&lt;name>&lt;forename>&lt;/forename> &lt;surname>&lt;/surname>&lt;/name>&lt;/author></String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
@@ -704,7 +704,7 @@
 																<String>fragment</String>
 																<String>				&lt;biblStruct type="article" subtype="undefined" status="published" xml:id="" xmlns="http://www.tei-c.org/ns/1.0">
 					&lt;analytic>
-						&lt;author>&lt;name key="#">&lt;/name>&lt;/author>
+						&lt;author>&lt;name key="#">&lt;forename>&lt;/forename> &lt;surname>&lt;/surname>&lt;/name>&lt;/author>
 						&lt;title level="a" type="main"/>
 						&lt;title level="a" type="sub"/>
 						&lt;idno type=""/>
@@ -714,7 +714,7 @@
 						&lt;title level="undefined" type="main"/>
 						&lt;title level="undefined" type="sub"/>
 						&lt;editor>
-							&lt;name key="#"/>
+							&lt;name key="#">&lt;forename>&lt;/forename> &lt;surname>&lt;/surname>&lt;/name>
 							&lt;note type="role">&lt;/note>
 						&lt;/editor>
 						&lt;edition>&lt;/edition>
@@ -796,7 +796,10 @@
 				&lt;monogr>
 					&lt;title level="m" type="main">&lt;/title>
 					&lt;title level="m" type="sub">&lt;/title>
-					&lt;editor>&lt;name key="#"/>&lt;note type="role"/>&lt;/editor>
+					&lt;editor>
+					    &lt;name key="#">&lt;forename>&lt;/forename> &lt;surname>&lt;/surname>&lt;/name>
+					    &lt;note type="role"/>
+					&lt;/editor>
 					&lt;edition>&lt;/edition>
 					&lt;imprint>
 						&lt;pubPlace>&lt;/pubPlace>

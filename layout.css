@@ -116,14 +116,18 @@ listBibl > biblStruct[subtype]:before{
 
 }
 
+author {
+	
+	display: block;
+	
+}
 
 author name {
 
-	display: block;
     -oxy-display-tags: none;
 	
     content: oxy_label(text, "Author: ", width, 10em, text-align, right)
-             oxy_editor(type, text, edit, "#text", columns, 60);
+             oxy_editor(type, text, edit, "#text", columns, 50);
 			 
 	visibility:-oxy-collapse-text;
 
@@ -214,18 +218,24 @@ author name surname{
 	-oxy-display-tags: none;
 	
     content: oxy_label(text, "   Surname: ")
-             oxy_editor(type, text, edit, "#text", columns, 15)
-			 oxy_editor(type, button, actionID, insert_author, transparent, true, color, #FFFFFF)
+             oxy_editor(type, text, edit, "#text", columns, 15);
+			 /*oxy_editor(type, button, actionID, insert_author, transparent, true, color, #FFFFFF)
 			 oxy_editor(type, button, actionID, delete_author, transparent, true, color, #FFFFFF);
-
+*/
 	visibility:-oxy-collapse-text;	
 	
 	
 }
+
+
+author:after{
 	
-
-
-
+	content: oxy_editor(type, button, actionID, insert_author, transparent, true, color, #FFFFFF)
+			 oxy_editor(type, button, actionID, delete_author, transparent, true, color, #FFFFFF);
+			display: inline;
+	
+}
+	
 
 /* Editor */
 editor > note[type="role"]{
