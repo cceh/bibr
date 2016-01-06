@@ -96,11 +96,22 @@ listBibl > biblStruct {
 listBibl > biblStruct:before{
 
 	
-	content: "biblStruct (" attr(type) ") " oxy_editor(type, button, actionID, delete_biblStruct, transparent, true, color, #FFFFFF);;
+	content: "biblStruct (" attr(type) ") "
+		oxy_editor(type, button, actionID, delete_biblStruct, transparent, true, color, #FFFFFF);
 	font-size: 15pt;
 	font-weight: bold;
 	
 	padding-left: 5px;
+
+
+}
+
+
+listBibl > biblStruct[subtype]:before{
+
+	
+	content: "biblStruct (" attr(type) "/" attr(subtype) ") "
+		oxy_editor(type, button, actionID, delete_biblStruct, transparent, true, color, #FFFFFF);
 
 
 }
