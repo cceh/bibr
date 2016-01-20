@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" n="testms">
+	<teiHeader>
+		<fileDesc>
+			<titleStmt>
+				<title>Luhmann_biblStruct</title>
+				<author>Sebastian Rahtz</author>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>TEI Consortium</publisher>
+				<availability status="free">
+					<licence target="http://creativecommons.org/licenses/by-sa/3.0/"> Distributed under a Creative
+						Commons Attribution-ShareAlike 3.0 Unported License </licence>
+					<licence target="http://www.opensource.org/licenses/BSD-2-Clause"><p>Copyright 2013 TEI Consortium.</p><p>All rights reserved.</p><p>Redistribution and use in source and binary forms, with or without modification, are
+						permitted provided that the following conditions are met:</p><list>
+						<item>Redistributions of source code must retain the above copyright notice, this list of
+								conditions and the following disclaimer.</item>
+						<item>Redistributions in binary form must reproduce the above copyright notice, this list of
+								conditions and the following disclaimer in the documentation and/or other materials provided
+								with the distribution.</item>
+						</list><p>This software is provided by the copyright holders and contributors "as is" and any express
+							or implied warranties, including, but not limited to, the implied warranties of
+							merchantability and fitness for a particular purpose are disclaimed. In no event shall the
+							copyright holder or contributors be liable for any direct, indirect, incidental, special,
+							exemplary, or consequential damages (including, but not limited to, procurement of substitute
+							goods or services; loss of use, data, or profits; or business interruption) however caused
+							and on any theory of liability, whether in contract, strict liability, or tort (including
+							negligence or otherwise) arising in any way out of the use of this software, even if advised
+							of the possibility of such damage.</p></licence>
+					<p>TEI material can be licensed differently depending on the use you intend to make of it.
+						Hence it is made available under both the CC+BY and BSD-2 licences. The CC+BY licence is
+						generally appropriate for usages which treat TEI content as data or documentation. The BSD-2
+						licence is generally appropriate for usage of TEI content in a software environment. For
+						further information or clarification, please contact the <ref target="mailto:info@tei-c.org">TEI Consortium</ref>. </p>
+				</availability>
+			</publicationStmt>
+			<notesStmt>
+				<note type="ns">http://www.example.org/ns/nonTEI</note>
+			</notesStmt>
+			<sourceDesc>
+				<p>Written from scratch.</p>
+			</sourceDesc>
+		</fileDesc>
+	</teiHeader>
+	<text>
+		<body>
+			<div><p></p></div>
+		</body>
+		<back>
+			<div>
+				<head>Formal specification</head>
+				<p>TEI for manuscript description</p>
+				<schemaSpec ident="luhmann_biblStruct" start="TEI teiCorpus" prefix="">
+					<!-- required modules -->
+					<moduleRef key="header"/>
+					<moduleRef key="linking"/>
+					<moduleRef key="core"/>
+					<moduleRef key="tei"/>
+					<moduleRef key="textstructure"/>
+					<!-- optional modules -->
+					<moduleRef key="namesdates"/>
+					<!-- element specifications -->
+					<elementSpec ident="idno" module="header" mode="change">
+						<attList>
+							<attDef ident="type" mode="change" usage="req">
+								<datatype>
+									<rng:text/>
+								</datatype>
+								<valList type="closed" mode="replace">
+									<!-- Die folgenden Werte wurde aus dem Projekt CceH-bibliographies übernommen und sollten unverändert bleiben-->
+									<valItem ident="short_title">
+										<desc>Kurztitel obligatorisch (höchstens 60 Zeichen, inkl. Leerzeichen)</desc>
+									</valItem>
+									<valItem ident="ISBN">
+										<desc>ISBN</desc>
+									</valItem>
+									<valItem ident="ISSN">
+										<desc>ISSN</desc>
+									</valItem>
+									<valItem ident="DOI">
+										<desc>DOI</desc>
+									</valItem>
+									<valItem ident="URL">
+										<desc>URL</desc>
+									</valItem>
+									<valItem ident="signature">
+										<desc>Signatur</desc>
+									</valItem>
+									<!-- Luhmann Erweiterungen bibliographische Informationen-->
+									<valItem ident="nl_bibl_dammann">
+										<desc>In der Bibliographie der Luhamnnschen Publikationen (nl_bibl_dammann) intern genutzte ID. Wird angereichert und als übergreifemde Projket xml:id in das übergeordnete biblStruct-Element übernommen.</desc>
+									</valItem>
+									<valItem ident="nl_bibl_sek-lit_kinitz">
+										<desc>In der Bibliographie der durch Daniel Kinitz erstellten Sekundärliterur (nl_bibl_sek-lit_kinitz) intern genutzte ID. Wird angereichert und als übergreifende Projekt xml:id in das übergeordnete biblStruct-Element übernommen.</desc>
+									</valItem>
+								</valList>
+							</attDef>
+						</attList>
+					</elementSpec>
+					<!-- module core -->
+					<!-- biblScope -->
+					<elementSpec ident="biblScope" module="core" mode="change">
+						<attList>
+							<attDef ident="unit" mode="change">
+								<valList type="closed" mode="replace">
+									<!-- Die folgenden Werte wurde aus dem Projekt cceh-bibliographies übernommen und sollten unverändert bleiben-->
+									<valItem ident="volume">
+										<desc>Einzelband</desc>
+									</valItem>
+									<valItem ident="issue">
+										<desc>Nummer</desc>
+									</valItem>
+									<valItem ident="page">
+										<desc>Seitensequenz</desc>
+									</valItem>
+									<valItem ident="chapter">
+										<desc>Kapitel</desc>
+									</valItem>
+									<valItem ident="part">
+										<desc>Teil</desc>
+									</valItem>
+									<!-- Ergänzung aus dem Luhmann-Projekt -->
+									<valItem ident="column">
+										<desc>Spaltensequenz</desc>
+									</valItem>
+								</valList>
+							</attDef>
+						</attList>
+					</elementSpec>
+					<!-- biblStruct-->
+					<elementSpec ident="biblStruct" module="core" mode="change">
+						<attList>
+							<attDef ident="type" mode="change" usage="req">
+								<datatype>
+									<rng:text/>
+								</datatype>
+								<valList type="closed" mode="replace">
+									<!-- Die folgenden Werte wurde aus dem Projekt CceH-bibliographies übernommen und sollten unverändert bleiben-->
+									<valItem ident="book">
+										<desc>Monographien</desc>
+									</valItem>
+									<valItem ident="bookSection">
+										<desc>Abschnitte/Artikel in Monographien</desc>
+									</valItem>
+									<valItem ident="journalArticle">
+										<desc>Artikel in Sammelpublikation und Periodika</desc>
+									</valItem>
+									<valItem ident="webPublication">
+										<desc>Webpublikation</desc>
+									</valItem>
+									<!-- Luhmann-Erweiterung -->
+									<valItem ident="article">
+										<desc>Artikel in Monographie (book) oder Journal (journal)</desc>
+									</valItem>
+									<valItem ident="translation">
+										<desc>Translations</desc>
+									</valItem>
+									<valItem ident="journal">
+										<desc>Sammelpublikation/Periodikum</desc>
+									</valItem>
+									<valItem ident="series">
+										<desc>Mehrbändiges Werk</desc>
+									</valItem>
+									<valItem ident="relatedItem">
+										<desc>nl_bibl_dammann: relatedItem enthält hier Text, der in ein <bibl type="relatedItem"> eingeschlossen werden muss</bibl></desc>
+									</valItem>
+								</valList>
+							</attDef>
+							<attDef ident="subtype" mode="change">
+								<datatype>
+									<rng:text/>
+								</datatype>
+								<valList type="closed" mode="replace">
+									<valItem ident="misc">
+										<desc>nl_bibl_dammann: Miscellaneous (interviews, discussions,
+											bibliographies, introductions to books of other authors, letters, obituaries
+											et al.</desc>
+									</valItem>
+									<valItem ident="review">
+										<desc>nl_bibl_dammann: Reviews</desc>
+									</valItem>
+									<valItem ident="kinitz_inbuch">
+										<desc>War in den XML-Daten von Daniel Kinitz als INBUCH getaggt. Das heisst der Autor des Artikels (title in INBUCH) stimmt mit dem AUTOREN des BUCH überein. Auf dieser Basis kann in einem zweiten Schritt der Autor gedoppelt werden.</desc>
+									</valItem>
+									<valItem ident="kinitz_aisb">
+										<desc>War in den XML-Daten von Daniel Kinitz als AISB getaggt. Das heisst der Autor des Artikels (title in INBUCH) weicht von dem  AUTOREN des BUCH ab.</desc>
+									</valItem>
+									<valItem ident="kinitz_sb">
+										<desc>War in den XML-Daten von Daniel Kinitz als SB getaggt</desc>
+									</valItem>
+									<valItem ident="kinitz_wea">
+										<desc>War in den XML-Daten von Daniel Kinitz als WEA getaggt</desc>
+									</valItem>
+									<valItem ident="kinitz_bawea">
+										<desc>War in den XML-Daten von Daniel Kinitz als BAWEA getaggt</desc>
+									</valItem>
+								</valList>
+							</attDef>
+						</attList>
+					</elementSpec>
+					<elementSpec ident="date" module="core" mode="change">
+						<!-- Hier initial vorgaben aus projekt cceh-bibliographies übernommen. zu überlegen, ob das sinn macht, oder lieber zwei schemata oder für bibliographien auslagern in schematron? -->
+						<attList>
+							<attDef ident="when" mode="change"/>
+							<attDef ident="type" mode="change">
+								<valList type="closed" mode="replace">
+									<!-- Die folgenden Werte wurde aus dem Projekt cceh-bibliographies übernommen und sollten unverändert bleiben-->
+									<valItem ident="posting">
+										<desc>Erstellungsdatum der Webressource</desc>
+									</valItem>
+									<valItem ident="access">
+										<desc>Datum des letzten Zugriffs auf die Webressource</desc>
+									</valItem>
+									<!-- Luhamnn Erweiterung -->
+									<valItem ident="pubYear">
+										<desc>Erscheinungsjahr</desc>
+									</valItem>
+								</valList>
+							</attDef>
+						</attList>
+					</elementSpec>
+					<!-- note -->
+					<!-- Hier initial Vorgaben aus projekt cceh-bibliographies übernommen. zu überlegen, ob das sinn macht, oder lieber zwei schemata oder für bibliographien auslagern in schematron? -->
+					<elementSpec ident="note" module="core" mode="change">
+						<attList>
+							<attDef ident="type" mode="change" usage="req">
+								<valList type="closed" mode="replace">
+									<valItem ident="reprint">
+										<desc>[Korrigierter Nachdruck xxxx | Nachdruck zum Erstdruck von xxxx]</desc>
+									</valItem>
+									<valItem ident="role">
+										<desc>[herausgegeben, übersetzt und erläutert von]</desc>
+									</valItem>
+									<valItem ident="rel_text">
+										<desc>die Beziehung des bibliografischen Items zu einem Primärtext
+											Vorschläge: Edition|Übersetzung|Kommentar oder Freitext</desc>
+									</valItem>
+									<valItem ident="tags">
+										<desc>Schlagwörter, à la DARE; kann einmal vorkommen; kommaseparierte Liste</desc>
+									</valItem>
+									<valItem ident="abstract">
+										<desc>Teasertext</desc>
+									</valItem>
+									<valItem ident="item">
+										<desc>Exemplar (gedruckt oder digital)</desc>
+									</valItem>
+									<valItem ident="access">
+										<desc>Zugänglichkeit</desc>
+									</valItem>
+									<valItem ident="notes">
+										<desc>allgemeine Anmerkungen - durch p-Elemente strukturiert - kann einmal vorkommen</desc>
+									</valItem>
+									<!-- Luhmann Ergänzungen -->
+									<valItem ident="unsolved">
+										<desc>Hier besteht noch weiterer Recherchebedarf</desc>
+									</valItem>
+									<valItem ident="not_tagged_yet">
+										<desc>Kontrollausgabe unausgezeichnter Inhalte</desc>
+									</valItem>
+									<valItem ident="not_tagged_yet_child">
+										<desc>Kontrollausgabe unausgezeichnter Inhalte, Kindelement (ggf. ersetzten durch copy_all)</desc>
+									</valItem>
+									<valItem ident="copy-all">
+										<desc>Kontrollausgabe des gesamten Datensatzes</desc>
+									</valItem>
+									<valItem ident="kinitz_not_tagged_yet">
+										<desc>Inhlate von noch unklarer Wichtigkeit</desc>
+									</valItem>
+								</valList>
+							</attDef>
+							<attDef ident="subtype" mode="change">
+								<valList type="closed" mode="replace">
+									<valItem ident="print_version">
+										<desc>Druckexemplar</desc>
+									</valItem>
+									<valItem ident="digitized_version">
+										<desc>Digitalisat</desc>
+									</valItem>
+								</valList>
+							</attDef>
+						</attList>
+					</elementSpec>
+					<!-- textLang -->
+					<elementSpec ident="textLang" module="core" mode="change">
+						<attList>
+							<attDef ident="mainLang" mode="change" usage="req">
+								<!-- Die folgenden Werte wurde aus dem Projekt cceh-bibliographies übernommen und sollten unverändert bleiben-->
+								<desc>Kürzelvergabe folgt <ref target="http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry">IANA</ref>/ISO 639 2-letter language code.</desc>
+								<valList type="closed" mode="replace">
+									<valItem ident="de">
+										<desc>deutsch (Kürzel nach <ptr target="http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry"/></desc>
+									</valItem>
+									<valItem ident="en">
+										<desc>englisch  (Kürzel nach <ptr target="http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry"/></desc>
+									</valItem>
+									<valItem ident="fr">
+										<desc>französisch (Kürzel nach <ptr target="http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry"/></desc>
+									</valItem>
+									<valItem ident="undefined">
+										<desc>noch nicht definiert</desc>
+									</valItem>
+								</valList>
+							</attDef>
+							<attDef ident="otherLang" mode="change">
+								<!-- Die folgenden Werte wurde aus dem Projekt cceh-bibliographies übernommen und sollten unverändert bleiben-->
+								<valList type="open" mode="replace">
+									<valItem ident="en fr">
+										<desc>Aufzählung weiterer Sprachen (durch Leerzeichen getrennt)</desc>
+									</valItem>
+								</valList>
+							</attDef>
+						</attList>
+					</elementSpec>
+					<!-- title -->
+					<elementSpec ident="title" module="core" mode="change">
+						<!-- In cceh-bibliographies waren @type und @level für title Standardattribute, da hier aber noch andere Inhlate wurde Prüfung in Schematron-Stylesheet verschoben -->
+						<attList>
+							<attDef ident="type" mode="change">
+								<valList type="closed" mode="replace">
+									<!-- Die folgenden Werte wurde aus dem Projekt CceH-bibliographies übernommen und sollten unverändert bleiben-->
+									<valItem ident="main">
+										<desc>Haupttitel (nur einmal)</desc>
+									</valItem>
+									<valItem ident="sub">
+										<desc>Untertitel (darf mehrfach vorkommen)</desc>
+									</valItem>
+								</valList>
+							</attDef>
+							<attDef ident="level" mode="change">
+								<valList type="open" mode="replace">
+									<valItem ident="a">
+										<desc>(analytic) the title applies to an analytic item, such as an article, poem, or other work published as part of a larger item.</desc>
+									</valItem>
+									<valItem ident="m">
+										<desc>(monographic) the title applies to a monograph such as a book or other item considered to be a distinct publication, including single volumes of multi-volume works</desc>
+									</valItem>
+									<valItem ident="j">
+										<desc>(journal) the title applies to any serial or periodical publication such as a journal, magazine, or newspaper</desc>
+									</valItem>
+									<valItem ident="s">
+										<desc>(series) the title applies to a series of otherwise distinct publications such as a collection</desc>
+									</valItem>
+									<valItem ident="u">
+										<desc>(unpublished) the title applies to any unpublished material (including theses and dissertations unless published by a commercial press)</desc>
+									</valItem>
+									<valItem ident="unsolved">
+										<desc>Solang title-Element nur dummy für Dateneingabe</desc>
+									</valItem>
+								</valList>
+							</attDef>
+						</attList>
+					</elementSpec>
+					<elementSpec ident="relatedItem" module="core" mode="change">
+						<attList>
+							<attDef ident="type" mode="change" usage="req">
+								<!-- Liste basiert auf cceh-bibliographies, positiv-Richtung wurde ergänzt. z.B. vorher nur translationOf jetzt auch translation -->
+								<valList type="closed" mode="replace">
+									<valItem ident="translation">
+										<desc>Übersetzung</desc>
+									</valItem>
+									<valItem ident="translationOf">
+										<desc>Übersetzung von</desc>
+									</valItem>
+									<valItem ident="reprint">
+										<desc>Nachdruck</desc>
+									</valItem>
+									<valItem ident="reprintOf">
+										<desc>Nachdruck von</desc>
+									</valItem>
+									<valItem ident="reviewOf">
+										<desc>Review zu</desc>
+									</valItem>
+									<valItem ident="partOf">
+										<desc>Teil von</desc>
+									</valItem>
+									<valItem ident="continuedBy">
+										<desc>Fortgesetzt von</desc>
+									</valItem>
+									<valItem ident="continuationOf">
+										<desc>Fortsetzung von</desc>
+									</valItem>
+									<!-- Luhmann Ergänzungen -->
+									<valItem ident="firstPrint">
+										<desc>Erstdruck</desc>
+									</valItem>
+									<valItem ident="articleIncluded">
+										<desc>Einzelner Artikel der im übergeordneten Item enthalten ist</desc>
+									</valItem>
+								</valList>
+							</attDef>
+							<attDef ident="subtype" mode="change" usage="opt">
+								<valList type="closed" mode="replace">
+									<valItem ident="trans2engl">
+										<desc>Übersetzung ins Englische</desc>
+									</valItem>
+									<valItem ident="trans2ital">
+										<desc>Übersetzung ins Italienische</desc>
+									</valItem>
+									<valItem ident="trans2japan">
+										<desc>Übersetzung ins Japanische</desc>
+									</valItem>
+									<valItem ident="trans2span">
+										<desc>Übersetzung ins Spanische</desc>
+									</valItem>
+									<valItem ident="trans2kroat">
+										<desc>Übersetzung ins Kroatische</desc>
+									</valItem>
+									<valItem ident="trans2dt">
+										<desc>Übersetzung ins Deutsche</desc>
+									</valItem>
+								</valList>
+							</attDef>
+							<!-- Vorgabe aus cceh bibliographies hier nicht gültig, da relatedItem nicht leer und <ref> enthält -->
+							<!--<attDef ident="target" mode="change" usage="req"/>-->
+						</attList>
+					</elementSpec>
+				</schemaSpec>
+			</div>
+		</back>
+	</text>
+</TEI>
