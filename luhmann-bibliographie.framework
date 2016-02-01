@@ -56,10 +56,10 @@
 											<String>Fügt eine Monographie zur Bibliographie hinzu.</String>
 										</field>
 										<field name="largeIconPath">
-											<String>${framework}/icons/book-open-variant.png</String>
+											<String>${framework}/icons/20px/book-open-variant.png</String>
 										</field>
 										<field name="smallIconPath">
-											<String>${framework}/icons/book-open-variant.png</String>
+											<String>${framework}/icons/20px/book-open-variant.png</String>
 										</field>
 										<field name="accessKey">
 											<String></String>
@@ -137,10 +137,10 @@
 											<String>Fügt einen Buchabschnitt zur Bibliographie hinzu.</String>
 										</field>
 										<field name="largeIconPath">
-											<String>${framework}/icons/book-open.png</String>
+											<String>${framework}/icons/20px/book-open.png</String>
 										</field>
 										<field name="smallIconPath">
-											<String>${framework}/icons/book-open.png</String>
+											<String>${framework}/icons/20px/book-open.png</String>
 										</field>
 										<field name="accessKey">
 											<String></String>
@@ -221,10 +221,10 @@
 											<String>Fügt einen Zeitschriften-Artikel zur Bibliographie hinzu.</String>
 										</field>
 										<field name="largeIconPath">
-											<String>${framework}/icons/file-document.png</String>
+											<String>${framework}/icons/20px/file-document.png</String>
 										</field>
 										<field name="smallIconPath">
-											<String>${framework}/icons/file-document.png</String>
+											<String>${framework}/icons/20px/file-document.png</String>
 										</field>
 										<field name="accessKey">
 											<String></String>
@@ -302,10 +302,10 @@
 											<String>Fügt einen Autor zum bibliografischen Eintrag hinzu</String>
 										</field>
 										<field name="largeIconPath">
-											<String>${framework}/icons/account.png</String>
+											<String>${framework}/icons/20px/account.png</String>
 										</field>
 										<field name="smallIconPath">
-											<String>${framework}/icons/account.png</String>
+											<String>${framework}/icons/20px/account.png</String>
 										</field>
 										<field name="accessKey">
 											<String></String>
@@ -360,10 +360,10 @@
 											<String>Fügt eine Bibliographie-Liste zur Datei hinzu.</String>
 										</field>
 										<field name="largeIconPath">
-											<String>${framework}/icons/playlist-plus.png</String>
+											<String>${framework}/icons/20px/playlist-plus.png</String>
 										</field>
 										<field name="smallIconPath">
-											<String>${framework}/icons/playlist-plus.png</String>
+											<String>${framework}/icons/20px/playlist-plus.png</String>
 										</field>
 										<field name="accessKey">
 											<String></String>
@@ -421,10 +421,10 @@
 											<String>Fügt einen bibliographischen Eintrag zur aktuellen Liste hinzu.</String>
 										</field>
 										<field name="largeIconPath">
-											<String>${framework}/icons/plus.png</String>
+											<String>${framework}/icons/20px/plus.png</String>
 										</field>
 										<field name="smallIconPath">
-											<String>${framework}/icons/plus.png</String>
+											<String>${framework}/icons/20px/plus.png</String>
 										</field>
 										<field name="accessKey">
 											<String></String>
@@ -479,10 +479,10 @@
 											<String>Fügt ein zugehöriges Element zum aktuellen bibliographischen Eintrag hinzu.</String>
 										</field>
 										<field name="largeIconPath">
-											<String>${framework}/icons/sitemap.png</String>
+											<String>${framework}/icons/20px/sitemap.png</String>
 										</field>
 										<field name="smallIconPath">
-											<String>${framework}/icons/sitemap.png</String>
+											<String>${framework}/icons/20px/sitemap.png</String>
 										</field>
 										<field name="accessKey">
 											<String></String>
@@ -535,10 +535,10 @@
 											<String>Fügt eine Notiz zum aktuellen bibliographischen Eintrag hinzu.</String>
 										</field>
 										<field name="largeIconPath">
-											<String>${framework}/icons/note-plus-outline.png</String>
+											<String>${framework}/icons/20px/note-plus-outline.png</String>
 										</field>
 										<field name="smallIconPath">
-											<String>${framework}/icons/note-plus-outline.png</String>
+											<String>${framework}/icons/20px/note-plus-outline.png</String>
 										</field>
 										<field name="accessKey">
 											<String></String>
@@ -589,10 +589,10 @@
 											<String>Löscht den aktuellen Autor</String>
 										</field>
 										<field name="largeIconPath">
-											<String>${framework}/icons/delete.png</String>
+											<String>${framework}/icons/20px/delete.png</String>
 										</field>
 										<field name="smallIconPath">
-											<String>${framework}/icons/delete.png</String>
+											<String>${framework}/icons/20px/delete.png</String>
 										</field>
 										<field name="accessKey">
 											<String></String>
@@ -635,10 +635,10 @@
 											<String>Löscht den aktuellen bibliographischen Eintrag</String>
 										</field>
 										<field name="largeIconPath">
-											<String>${framework}/icons/delete.png</String>
+											<String>${framework}/icons/20px/delete.png</String>
 										</field>
 										<field name="smallIconPath">
-											<String>${framework}/icons/delete.png</String>
+											<String>${framework}/icons/20px/delete.png</String>
 										</field>
 										<field name="accessKey">
 											<String></String>
@@ -681,10 +681,10 @@
 											<String>Fügt einen Artikel zur Bibliographie hinzu.</String>
 										</field>
 										<field name="largeIconPath">
-											<String>${framework}/icons/file-document.png</String>
+											<String>${framework}/icons/20px/file-document.png</String>
 										</field>
 										<field name="smallIconPath">
-											<String>${framework}/icons/file-document.png</String>
+											<String>${framework}/icons/20px/file-document.png</String>
 										</field>
 										<field name="accessKey">
 											<String></String>
@@ -764,10 +764,10 @@
 											<String>Unterartikel hinzufügen</String>
 										</field>
 										<field name="largeIconPath">
-											<String>${framework}/icons/plus.png</String>
+											<String>${framework}/icons/20px/plus.png</String>
 										</field>
 										<field name="smallIconPath">
-											<String>${framework}/icons/plus.png</String>
+											<String>${framework}/icons/20px/plus.png</String>
 										</field>
 										<field name="accessKey">
 											<String></String>
