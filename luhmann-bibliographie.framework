@@ -957,7 +957,9 @@
 						</authorExtension>
 					</field>
 					<field name="templatesLocations">
-						<String-array/>
+						<String-array>
+							<String>${frameworkDir}/vorlagen</String>
+						</String-array>
 					</field>
 					<field name="xmlCatalogs">
 						<String-array/>

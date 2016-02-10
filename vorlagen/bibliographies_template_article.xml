@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../common/luhmann.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../common/luhmann.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" rendition="luhmann_bibliographie">
+	<teiHeader>
+		<fileDesc>
+			<titleStmt>
+				<title type="main">Template für bibl @type="article"</title>
+				<author>Niklas Luhmann Archiv</author>
+			</titleStmt>
+			<publicationStmt>
+				<p/>
+			</publicationStmt>
+			<sourceDesc>
+				<p/>
+			</sourceDesc>
+		</fileDesc>
+		<xi:include href="../common/encodingDesc.xml" parse="xml" xpointer="encodingDesc"/>
+		<revisionDesc>
+			<change n="base_1" when="2015-11-19" who="#cceh"/>
+		</revisionDesc>
+	</teiHeader>
+	<text>
+		<body>
+			<listBibl>
+				<biblStruct type="article" subtype="undefined" status="published" xml:id="">
+					<analytic>
+						<author><name key="#"></name></author>
+						<title level="a" type="main"/>
+						<title level="a" type="sub"/>
+						<idno type=""/>
+						<textLang mainLang="de"/>
+					</analytic>
+					<monogr>
+						<title level="undefined" type="main"/>
+						<title level="undefined" type="sub"/>
+						<editor>
+							<name key="#"/>
+							<note type="role"></note>
+						</editor>
+						<edition></edition>
+						<imprint>
+							<pubPlace/>
+							<publisher/>
+							<date type="pubYear" when=""/>
+							<biblScope unit="page" from="" to=""/>
+							<biblScope unit="issue"/>
+							<biblScope unit="chapter"/>
+						</imprint>
+					</monogr>
+					</biblStruct>
+			</listBibl>
+		</body>
+	</text>
+</TEI>
