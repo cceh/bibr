@@ -530,7 +530,7 @@ biblScope[unit="volume"]{
 	display: block;
     -oxy-display-tags: none;
 	
-    content: oxy_label(text, "Band: ", width, 10em, text-align, right)
+    content: oxy_label(text, "Band/Jahrgang: ", width, 10em, text-align, right)
              oxy_editor(type, text, edit, "#text", columns, 60);
 			 
 	visibility:-oxy-collapse-text;	
