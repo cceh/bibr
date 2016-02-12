@@ -1,0 +1,51 @@
+<?xml-model href="../../common/luhmann_biblStruct.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../common/luhmann.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude"
+	rendition="luhmann_bibliographie">
+	<teiHeader>
+		<fileDesc>
+			<titleStmt>
+				<title level="overall" type="main">Eigenständig erschienenes Werk</title>
+				<author>Niklas Luhmann Archiv</author>
+			</titleStmt>
+			<publicationStmt>
+				<p/>
+			</publicationStmt>
+			<sourceDesc>
+				<p></p>
+			</sourceDesc>
+		</fileDesc>
+		<xi:include href="../../common/encodingDesc.xml" parse="xml" xpointer="encodingDesc"/>
+		<revisionDesc>
+			<change n="base_1" when="2016-02-10" who="#cceh">Datensatz neu angelegt am 2016-02-10</change>
+		</revisionDesc>
+	</teiHeader>
+	<text>
+		<body>
+			<listBibl>
+				<biblStruct type="book" status="published" xml:id="">
+					<monogr xml:id="monogr_">
+						<author><name key=""><forename></forename>
+								<surname></surname></name></author>
+						<title level="m" type="main"></title>
+						<title level="m" type="sub"></title>
+						<idno type="neu"></idno>
+						<textLang mainLang=""/>
+						<editor><name/></editor>
+						<edition/>
+						<imprint>
+							<pubPlace></pubPlace>
+							<publisher></publisher>
+							<date type="pubYear"></date>
+						</imprint>
+					</monogr>
+					<series xml:id="series_">
+						<title level="s" type="main"/>
+						<title level="s" type="sub"/>
+						<biblScope unit="volume"/>
+					</series>
+				</biblStruct>
+			</listBibl>
+		</body>
+	</text>
+</TEI>
