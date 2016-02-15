@@ -577,7 +577,14 @@ textLang{
     -oxy-display-tags: none;
 	
     content: oxy_label(text, "Sprache: ", width, 10em, text-align, right)
-			 oxy_editor(type, combo, edit, "@mainLang", editable, false, values, "de, en, fr", labels, "Deutsch, Englisch, Französisch", columns, 60);
+			 oxy_editor(
+				type, combo,
+				edit, "@mainLang",
+				editable, false,
+				values, "de, en, es, it, ja, fr, hr, sr, ru, zh, da, sv, fi, pt, hu, undefined",
+				labels, "Deutsch, Englisch, Spanisch, Italienisch, Japanisch, Französisch, Kroatisch, Serbisch, Russisch, Chinesich, Dänisch, Schwedisch, Finnisch, Portugiesisch, Ungarisch, Noch nicht definiert",
+				columns, 60
+			);
 			 
 	visibility:-oxy-collapse-text;	
 }
