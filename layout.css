@@ -32,7 +32,7 @@ idno, bibl{
 
 lb {
 
-	visibility:-oxy-collapse-text;
+	visibility: -oxy-collapse-text;
 	content: "\A";
 	
 }
@@ -73,14 +73,6 @@ listBibl{
 	
 	display: block;
 	
-}
-
-
-
-
-
-series{
-	font-weight: bold;
 }
 
 
@@ -615,7 +607,6 @@ analytic:before{
 
 	content: "Einzeltext";
 	font-weight: bold;
-
 	padding-left: 5px;
 
 }
@@ -627,6 +618,7 @@ border-left: 2px solid #67737e; /* darker LightSLategray */
 margin-left: 10px;
 background-color: #ffc7b3;
 font-weight: normal;
+display: block;
 
 
 }
@@ -636,19 +628,16 @@ series:before{
 
 	content: "Reihe";
 	font-weight: bold;
-	
 	padding-left: 5px;
 
 }
 
 
-
 monogr{
 
-border-left: 2px solid #67737e; /* darker LightSLategray */
-margin-left: 10px;
-background-color: #adebeb; /* lighter LightSeaGreen */
-
+	border-left: 2px solid #67737e; /* darker LightSLategray */
+	margin-left: 10px;
+	background-color: #adebeb; /* lighter LightSeaGreen */
 
 }
 
@@ -657,7 +646,6 @@ monogr:before{
 
 	content: "Übergeordnetes Werk";
 	font-weight: bold;
-	
 	padding-left: 5px;
 
 }
