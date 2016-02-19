@@ -132,7 +132,7 @@ listBibl{
 
 
 /* Main entries in a listBibl */
-listBibl > biblStruct {
+biblStruct {
 
 	margin-bottom: 10px;
 	border: 10px solid #778899; /* LightSLateGray */
@@ -140,8 +140,7 @@ listBibl > biblStruct {
 
 }
 
-
-listBibl > biblStruct:before{
+biblStruct:before{
 
 	
 	font-size: 15pt;
@@ -150,7 +149,7 @@ listBibl > biblStruct:before{
 
 }
 
-listBibl > biblStruct[type=bookSection]:before{
+biblStruct[type=bookSection]:before{
 
 	
 	content: "Buchabschnitt"
@@ -159,7 +158,7 @@ listBibl > biblStruct[type=bookSection]:before{
 }
 
 
-listBibl > biblStruct[type=book]:before{
+biblStruct[type=book]:before{
 
 	
 	content: "Buch"
@@ -168,7 +167,7 @@ listBibl > biblStruct[type=book]:before{
 }
 
 
-listBibl > biblStruct[type=journalArticle]:before{
+biblStruct[type=journalArticle]:before{
 
 	
 	content: "Zeitschriftenartikel"
@@ -177,7 +176,7 @@ listBibl > biblStruct[type=journalArticle]:before{
 }
 
 
-listBibl > biblStruct[subtype=review]:before{
+biblStruct[subtype=review]:before{
 
 	
 	content: "Zeitschriftenartikel (Rezension)"
