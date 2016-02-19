@@ -15,7 +15,9 @@
 						<null/>
 					</field>
 					<field name="classpath">
-						<String-array/>
+						<String-array>
+							<String>${framework}/ediarum.jar</String>
+						</String-array>
 					</field>
 					<field name="parentClassLoaderID">
 						<null/>
