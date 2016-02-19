@@ -1,0 +1,28 @@
+<?xml-model href="../../common/luhmann_biblStruct.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../common/luhmann.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude"
+	rendition="luhmann_bibliographie">
+	<teiHeader>
+		<xi:include href="../../common/fileDesc_journal.xml" parse="xml" xpointer="fileDesc"/>
+		<xi:include href="../../common/encodingDesc.xml" parse="xml" xpointer="encodingDesc"/>
+		<revisionDesc>
+			<change n="base_1" when="2016-02-04" who="#cceh">Basis Version</change>
+		</revisionDesc>
+	</teiHeader>
+	<text>
+		<body>
+				<biblStruct type="journal" status="published" xml:id="journals_">
+					<monogr>
+						<title level="j" type="main" xml:id="title"></title>
+						<title level="j" type="sub"></title>
+						<imprint>
+							<pubPlace/>
+							<publisher/>
+							<date type="pubYear" from="" to=""/>
+						</imprint>
+						<extent/>
+					</monogr>
+				</biblStruct>
+		</body>
+	</text>
+</TEI>
