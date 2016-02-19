@@ -1,4 +1,5 @@
 @namespace oxy url('http://www.oxygenxml.com/extensions/author');
+@namespace xi url('http://www.w3.org/2001/XInclude');
 
 /* Main */
 
@@ -36,11 +37,66 @@ lb {
 
 
 /* Header */
-	
 
 teiHeader {
 	
+	background-color: rgb(255,170,170);
+	margin-bottom: 10px;
+	padding: 10px;
+	
+}
+
+
+teiHeader revisionDesc {
 	display: none;
+}
+
+teiHeader publicationStmt {	
+	display: none;
+}
+
+teiHeader encodingDesc {
+	display: none;
+}
+
+teiHeader xi|include {
+	display: none !important;
+}
+
+
+teiHeader > fileDesc > titleStmt > title:before{
+	
+	content: "titleStmt: ";
+	
+}
+
+
+teiHeader > fileDesc > titleStmt > title{
+	
+	display: block;
+	-oxy-editable: false;
+	
+}
+
+
+teiHeader > fileDesc > titleStmt > author{
+	
+	display: none !important;
+	
+}
+
+
+teiHeader > fileDesc > sourceDesc > p:before{
+	
+	content: "sourceDesc: ";
+	
+}
+
+
+teiHeader > fileDesc > sourceDesc > p{
+	
+	display: block;
+	-oxy-editable: false;
 	
 }
 
@@ -142,12 +198,12 @@ author name {
     content: oxy_label(text, "Autor: ", width, 10em, text-align, right)
              oxy_editor(type, text, edit, "#text", columns, 50);
 			 
-	visibility:-oxy-collapse-text;
+	visibility: -oxy-collapse-text;
 
 }
 
 
-title[type="main"] {
+text title[type="main"] {
 
 	display: block;
     -oxy-display-tags: none;
@@ -155,13 +211,13 @@ title[type="main"] {
     content: oxy_label(text, "Titel: ", width, 10em, text-align, right)
              oxy_editor(type, text, edit, "#text", columns, 60);
 			 
-	visibility:-oxy-collapse-text;			 
+	visibility: -oxy-collapse-text;			 
 
 }
 
 
 
-title[type="sub"] {
+text title[type="sub"] {
 
 	display: block;
     -oxy-display-tags: none;
@@ -169,7 +225,7 @@ title[type="sub"] {
     content: oxy_label(text, "Untertitel: ", width, 10em, text-align, right)
              oxy_editor(type, text, edit, "#text", columns, 60);
 			 
-	visibility:-oxy-collapse-text;			 
+	visibility: -oxy-collapse-text;			 
 
 }
 
@@ -285,7 +341,6 @@ imprint {
 
 	display: block;
 	margin: 1px solid white;
-	
 	background-color: #b5e2e3; /* lighter LightSeaGreen */
 
 }
@@ -295,9 +350,7 @@ imprint:before{
 
 	content: "Imprint";
 	font-weight: bold;
-	
 	padding-left: 5px;
-
 
 }
 
@@ -475,8 +528,7 @@ biblScope[unit="chapter"]{
     content: oxy_label(text, "Kapitel: ", width, 10em, text-align, right)
              oxy_editor(type, text, edit, "#text", columns, 60);
 			 
-	visibility:-oxy-collapse-text;	
-	
+	visibility:-oxy-collapse-text;
 
 }
 
@@ -493,7 +545,6 @@ biblScope[unit="issue"]{
 			 
 	visibility:-oxy-collapse-text;	
 	
-
 }
 
 
@@ -507,9 +558,7 @@ biblScope[unit="volume"]{
 			 
 	visibility:-oxy-collapse-text;	
 	
-
 }
-
 
 
 ref{
@@ -517,6 +566,7 @@ ref{
 
 	
 }
+
 
 ref:after{
 
@@ -540,7 +590,6 @@ biblStruct > note, bibl > note, relatedItem > note{
 	
 	-oxy-display-tags: none;
 	
-	
 }
 
 
@@ -557,7 +606,7 @@ textLang{
 				labels, "Deutsch, Englisch, Spanisch, Italienisch, Japanisch, Französisch, Kroatisch, Serbisch, Russisch, Chinesich, Dänisch, Schwedisch, Finnisch, Portugiesisch, Ungarisch, Noch nicht definiert",
 				columns, 60
 			);
-			 
+
 	visibility:-oxy-collapse-text;	
 	
 }
