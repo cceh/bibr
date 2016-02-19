@@ -5,11 +5,8 @@
 TEI {
 	
 	background-color: white;
-	
 	-oxy-display-tags: none !important;
-	
 	color: black;
-	
 	font-family: sans-serif;
 	font-size: smaller;
 	
@@ -62,8 +59,10 @@ front {
 
 
 head {
+	
 	display: block;
 	font-style: italic;
+	
 }
 
 
@@ -76,13 +75,11 @@ listBibl{
 }
 
 
-
 /* Main entries in a listBibl */
 listBibl > biblStruct {
 
 	margin-bottom: 10px;
 	border: 10px solid #778899; /* LightSLateGray */
-	
 	padding-bottom: 5px;
 
 }
@@ -93,9 +90,7 @@ listBibl > biblStruct:before{
 	
 	font-size: 15pt;
 	font-weight: bold;
-	
 	padding-left: 5px;
-
 
 }
 
@@ -104,7 +99,6 @@ listBibl > biblStruct[type=bookSection]:before{
 	
 	content: "Buchabschnitt"
 		oxy_editor(type, button, actionID, delete_biblStruct, transparent, true, color, #FFFFFF);
-
 
 }
 
@@ -115,7 +109,6 @@ listBibl > biblStruct[type=book]:before{
 	content: "Buch"
 		oxy_editor(type, button, actionID, delete_biblStruct, transparent, true, color, #FFFFFF);
 
-
 }
 
 
@@ -125,7 +118,6 @@ listBibl > biblStruct[type=journalArticle]:before{
 	content: "Zeitschriftenartikel"
 		oxy_editor(type, button, actionID, delete_biblStruct, transparent, true, color, #FFFFFF);
 
-
 }
 
 
@@ -134,7 +126,6 @@ listBibl > biblStruct[subtype=review]:before{
 	
 	content: "Zeitschriftenartikel (Rezension)"
 		oxy_editor(type, button, actionID, delete_biblStruct, transparent, true, color, #FFFFFF);
-
 
 }
 
@@ -179,7 +170,6 @@ title[type="sub"] {
              oxy_editor(type, text, edit, "#text", columns, 60);
 			 
 	visibility:-oxy-collapse-text;			 
-
 
 }
 
@@ -246,7 +236,6 @@ author name surname{
 */
 	visibility:-oxy-collapse-text;	
 	
-	
 }
 
 
@@ -270,7 +259,6 @@ editor > note[type="role"]{
 			 
 	visibility:-oxy-collapse-text;			 
 
-
 }
 
 editor > note[type="role"]:before{
@@ -288,8 +276,7 @@ edition{
     content: oxy_label(text, "Ausgabe/Auflage: ", width, 10em, text-align, right)
              oxy_editor(type, text, edit, "#text", columns, 60);
 			 
-	visibility:-oxy-collapse-text;			 
-
+	visibility:-oxy-collapse-text;
 
 }
 
@@ -300,7 +287,6 @@ imprint {
 	margin: 1px solid white;
 	
 	background-color: #b5e2e3; /* lighter LightSeaGreen */
-
 
 }
 
@@ -325,8 +311,7 @@ date{
     content: oxy_label(text, "Datum: ", width, 10em, text-align, right)
              oxy_editor(type, text, edit, "#text", columns, 60);
 			 
-	visibility:-oxy-collapse-text;			 
-
+	visibility:-oxy-collapse-text;	
 
 }
 
@@ -339,8 +324,7 @@ pubPlace{
     content: oxy_label(text, "Veröffentlichungsort: ", width, 10em, text-align, right)
              oxy_editor(type, text, edit, "#text", columns, 60);
 			 
-	visibility:-oxy-collapse-text;			 
-
+	visibility:-oxy-collapse-text;
 
 }
 
@@ -353,8 +337,7 @@ publisher{
     content: oxy_label(text, "Verlag: ", width, 10em, text-align, right)
              oxy_editor(type, text, edit, "#text", columns, 60);
 			 
-	visibility:-oxy-collapse-text;			 
-
+	visibility:-oxy-collapse-text;
 
 }
 
@@ -367,11 +350,9 @@ idno{
     content: oxy_label(text, "Kennung: ", width, 10em, text-align, right)
              oxy_editor(type, text, edit, "#text", columns, 60);
 			 
-	visibility:-oxy-collapse-text;			 
-
+	visibility:-oxy-collapse-text;
 
 }
-
 
 
 /* relatedItems */
@@ -453,7 +434,6 @@ relatedItem author name{
              oxy_editor(type, text, edit, "#text", columns, 60);
 			 
 	visibility:-oxy-collapse-text;			 
-
 
 }
 
@@ -579,9 +559,8 @@ textLang{
 			);
 			 
 	visibility:-oxy-collapse-text;	
+	
 }
-
-
 
 
 note:before{
@@ -592,12 +571,11 @@ note:before{
 }
 
 
-
 analytic{
 
-border-left: 2px solid #67737e; /* darker LightSLategray */
-margin-left: 10px;
-background-color: #dbdbf7; /* darker lavender */
+	border-left: 2px solid #67737e; /* darker LightSLategray */
+	margin-left: 10px;
+	background-color: #dbdbf7; /* darker lavender */
 
 
 }
@@ -614,12 +592,11 @@ analytic:before{
 
 series{
 
-border-left: 2px solid #67737e; /* darker LightSLategray */
-margin-left: 10px;
-background-color: #ffc7b3;
-font-weight: normal;
-display: block;
-
+	border-left: 2px solid #67737e; /* darker LightSLategray */
+	margin-left: 10px;
+	background-color: #ffc7b3;
+	font-weight: normal;
+	display: block;
 
 }
 
@@ -656,5 +633,3 @@ monogr:first-child:before{
 	content: "" !important;
 	
 }
-
-
