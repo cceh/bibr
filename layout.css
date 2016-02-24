@@ -59,14 +59,15 @@ teiHeader encodingDesc {
 	display: none;
 }
 
-teiHeader xi|include {
+
+teiHeader xi|include[xpointer=encodingDesc] {
 	display: none !important;
 }
 
 
 teiHeader > fileDesc > titleStmt > title:before{
 	
-	content: "titleStmt: ";
+	content: "titleStmt: \A";
 	
 }
 
@@ -88,7 +89,7 @@ teiHeader > fileDesc > titleStmt > author{
 
 teiHeader > fileDesc > sourceDesc > p:before{
 	
-	content: "sourceDesc: ";
+	content: "sourceDesc: \A";
 	
 }
 
