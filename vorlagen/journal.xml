@@ -11,18 +11,18 @@
 	</teiHeader>
 	<text>
 		<body>
-				<biblStruct type="journal" status="published" xml:id="journals_">
-					<monogr>
-						<title level="j" type="main" xml:id="title"></title>
-						<title level="j" type="sub"></title>
-						<imprint>
-							<pubPlace/>
-							<publisher/>
-							<date type="pubYear" from="" to=""/>
-						</imprint>
-						<extent/>
-					</monogr>
-				</biblStruct>
+			<biblStruct type="journal" status="published" xml:id="journals_">
+				<monogr>
+					<title level="j" type="main" xml:id="title"></title>
+					<title level="j" type="sub"></title>
+					<imprint>
+						<pubPlace/>
+						<publisher/>
+						<date type="pubYear" from="" to=""/>
+					</imprint>
+					<extent/>
+				</monogr>
+			</biblStruct>
 		</body>
 	</text>
 </TEI>

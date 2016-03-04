@@ -22,30 +22,28 @@
 	</teiHeader>
 	<text>
 		<body>
-			<listBibl>
-				<biblStruct type="book" status="published" xml:id="">
-					<monogr xml:id="monogr_">
-						<author><name key=""><forename></forename>
-								<surname></surname></name></author>
-						<title level="m" type="main"></title>
-						<title level="m" type="sub"></title>
-						<idno type="neu"></idno>
-						<textLang mainLang=""/>
-						<editor><name/></editor>
-						<edition/>
-						<imprint>
-							<pubPlace></pubPlace>
-							<publisher></publisher>
-							<date type="pubYear"></date>
-						</imprint>
-					</monogr>
-					<series xml:id="series_">
-						<title level="s" type="main"/>
-						<title level="s" type="sub"/>
-						<biblScope unit="volume"/>
-					</series>
-				</biblStruct>
-			</listBibl>
+			<biblStruct type="book" status="published" xml:id="">
+				<monogr xml:id="monogr_">
+					<author><name key=""><forename></forename>
+							<surname></surname></name></author>
+					<title level="m" type="main"></title>
+					<title level="m" type="sub"></title>
+					<idno type="neu"></idno>
+					<textLang mainLang=""/>
+					<editor><name/></editor>
+					<edition/>
+					<imprint>
+						<pubPlace></pubPlace>
+						<publisher></publisher>
+						<date type="pubYear"></date>
+					</imprint>
+				</monogr>
+				<series xml:id="series_">
+					<title level="s" type="main"/>
+					<title level="s" type="sub"/>
+					<biblScope unit="volume"/>
+				</series>
+			</biblStruct>
 		</body>
 	</text>
 </TEI>

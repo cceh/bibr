@@ -834,6 +834,72 @@
 											<Boolean>false</Boolean>
 										</field>
 									</action>
+									<action>
+										<field name="id">
+											<String>add_monogr</String>
+										</field>
+										<field name="name">
+											<String>Übergeordnetes Werk referenzieren</String>
+										</field>
+										<field name="description">
+											<String></String>
+										</field>
+										<field name="largeIconPath">
+											<String>${framework}/icons/20px/book-open-variant.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>${framework}/icons/20px/book-open-variant.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>URL</String>
+																<String>http://luhmann1.soz.uni-bielefeld.de/api/logic/xml/get_all_books.xql</String>
+															</entry>
+															<entry>
+																<String>attribute name</String>
+																<String>href</String>
+															</entry>
+															<entry>
+																<String>attribute value</String>
+																<String>@xml:id</String>
+															</entry>
+															<entry>
+																<String>expression</String>
+																<String>//author+", "+//title</String>
+															</entry>
+															<entry>
+																<String>node</String>
+																<String>//biblStruct</String>
+															</entry>
+															<entry>
+																<String>xpath to element of the attribute</String>
+																<String>ancestor-or-self::*:biblStruct/*:include[1]</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>org.bbaw.telota.ediarum.InsertRegisterAttributeOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>true</Boolean>
+										</field>
+									</action>
 								</action-array>
 							</field>
 							<field name="menubarDescriptor">

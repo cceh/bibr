@@ -102,6 +102,20 @@ teiHeader > fileDesc > sourceDesc > p{
 }
 
 
+xi|include[parse="xml"][xpointer="monogr_"]{
+
+	content: "Sie haben noch kein übergeordnetes Werk referenziert.\A"
+		oxy_editor(
+			type, button,
+			actionID, add_monogr,
+			transparent, true,
+			color, #FFFFFF
+		)
+	"\A\A";
+	
+}
+
+
 front {
 	
 	margin-bottom: 20px;
@@ -681,4 +695,26 @@ monogr:first-child:before{
 	
 	content: "" !important;
 	
+}
+
+
+citedRange{
+	display: block;
+	content: 	
+		oxy_label(text, "citedRange: ", width, 10em, text-align, right)
+		
+		oxy_label(text, "From: ", width, 10em, text-align, right)
+			 oxy_editor(
+				type, text,
+				edit, "@from",
+				columns, 10
+			)
+			
+		oxy_label(text, "To: ", width, 10em, text-align, right)
+			 oxy_editor(
+				type, text,
+				edit, "@to",
+				columns, 10
+			);
+
 }
